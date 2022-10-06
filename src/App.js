@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Button, Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
 import Logo from "./image/logo2.png";
 
