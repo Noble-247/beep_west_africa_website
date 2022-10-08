@@ -1,12 +1,16 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import firstCarouselImage from "../../image/alphabet-blur-books-close-up-301920.jpg";
-import secondCarouselImage from "../../image/alphabet-class-conceptual-cube-301926.jpg";
-import thirdCarouselImage from "../../image/books-classroom-close-up-college-289737.jpg";
+import firstCarouselImage from "../../image/logos_and_sponsors/alphabet-blur-books-close-up-301920.jpg";
+import secondCarouselImage from "../../image/logos_and_sponsors/alphabet-class-conceptual-cube-301926.jpg";
+import thirdCarouselImage from "../../image/logos_and_sponsors/books-classroom-close-up-college-289737.jpg";
 
 function Carousels() {
+  const carouselCaptionBackground = {
+    backgroundColor: "rgba(30, 43, 55, 0.8)",
+  };
+
   return (
-    <div>
+    <div className='d-none d-md-block'>
       <Carousel fade>
         <Carousel.Item>
           <img
@@ -14,7 +18,7 @@ function Carousels() {
             src={firstCarouselImage}
             alt='First slide'
           />
-          <Carousel.Caption className='bg-dark px-3'>
+          <Carousel.Caption className='px-3' style={carouselCaptionBackground}>
             <h3>ACCELERATING DISCOVERY</h3>
             <p>
               Research Journals accelerates the dissemination of knowlege
@@ -30,7 +34,7 @@ function Carousels() {
             alt='Second slide'
           />
 
-          <Carousel.Caption className='bg-dark px-3'>
+          <Carousel.Caption className='px-3' style={carouselCaptionBackground}>
             <h3>ACCELERATING DISCOVERY</h3>
             <p>
               Research Journals accelerates the dissemination of knowlege
@@ -46,7 +50,7 @@ function Carousels() {
             alt='Third slide'
           />
 
-          <Carousel.Caption className='bg-dark px-3'>
+          <Carousel.Caption className='px-3' style={carouselCaptionBackground}>
             <h3>ACCELERATING DISCOVERY</h3>
             <p>
               Research Journals accelerates the dissemination of knowlege
