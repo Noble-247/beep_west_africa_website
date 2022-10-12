@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import JournalData from "../../data/journals";
+// import JournalData from "../../data/journals";
 
 function JournalCategoryDetails(props) {
   const { id } = useParams();
