@@ -3,7 +3,7 @@ import { Col, Container, Nav, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Footer(props) {
-  console.log(props);
+  // console.log(props);
   const copywriteNoteStyle = {
     fontSize: "13px",
     backgroundColor: "black",
@@ -82,23 +82,23 @@ function Footer(props) {
             <Stack direction='horizontal' gap={3}>
               <div>
                 <a href='/' target='_blank' rel='noopener noreferrer'>
-                  <i class='bi bi-facebook fs-4'></i>
+                  <i className='bi bi-facebook fs-4'></i>
                 </a>
               </div>
               <div>
                 <a href='/' target='_blank' rel='noopener noreferrer'>
                   {" "}
-                  <i class='bi bi-linkedin fs-4'></i>
+                  <i className='bi bi-linkedin fs-4'></i>
                 </a>
               </div>
               <div>
                 <a href='/' target='_blank' rel='noopener noreferrer'>
-                  <i class='bi bi-twitter fs-4'></i>
+                  <i className='bi bi-twitter fs-4'></i>
                 </a>
               </div>
               <div>
                 <a href='/' target='_blank' rel='noopener noreferrer'>
-                  <i class='bi bi-whatsapp fs-4'></i>
+                  <i className='bi bi-whatsapp fs-4'></i>
                 </a>
               </div>
             </Stack>

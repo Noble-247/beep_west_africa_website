@@ -13,6 +13,7 @@ import CallForPaper from "./components/pages/CallForPaper";
 import SubmitManuscript from "./components/pages/SubmitManuscript";
 import ContactUs from "./components/pages/ContactUs";
 import PageNotFound from "./components/pages/PageNotFound";
+import JournalCategoryDetails from "./components/pages/JournalCategoryDetails";
 
 function App() {
   const logoTextStyle = {
@@ -133,6 +134,10 @@ function App() {
             <Route path='/call_for_paper' element={<CallForPaper />} />
             <Route path='/submit_manuscript' element={<SubmitManuscript />} />
             <Route path='/contact_us' element={<ContactUs />} />
+            <Route
+              path='/journal_category/:id'
+              element={<JournalCategoryDetails />}
+            />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </Container>
