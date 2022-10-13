@@ -3,7 +3,6 @@ import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function JournalCategory(props) {
-  console.log(props);
   return (
     <Fragment>
       <Col sm={12} md={4}>

@@ -135,7 +135,7 @@ function App() {
             <Route path='/submit_manuscript' element={<SubmitManuscript />} />
             <Route path='/contact_us' element={<ContactUs />} />
             <Route
-              path='/journal_category/:id'
+              path='/journal_category/:journal_category_ID'
               element={<JournalCategoryDetails />}
             />
             <Route path='*' element={<PageNotFound />} />
