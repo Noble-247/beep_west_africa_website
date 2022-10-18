@@ -28,7 +28,7 @@ function Search() {
             <Form>
               <InputGroup size='lg' className='mb-3 bg-light'>
                 <Form.Control
-                  className='bg-light'
+                  className='bg-dark text-white'
                   type='text'
                   name='journalName'
                   value={searchData.journalName}
