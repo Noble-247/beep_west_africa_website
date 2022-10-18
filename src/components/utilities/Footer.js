@@ -106,7 +106,7 @@ function Footer(props) {
         </Row>
       </Container>
       <Container fluid className='p-0'>
-        <div style={copywriteNoteStyle} className='py-2 text-center'>
+        <div style={copywriteNoteStyle} className='py-2 px-3 text-center'>
           <small>
             &copy; BEEP WEST AFRICA INTERNATIONAL JOURNAL OF GLOBAL RESEARCH.
             2018 - 2022
