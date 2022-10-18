@@ -60,7 +60,7 @@ function Home() {
         <Row className='mb-3'>{JournalCategoties}</Row>
         <Link to={"/"} className='text-decoration-none'>
           <div className='mb-3'>
-            <div class='d-grid'>
+            <div className='d-grid'>
               <Button className='btn btn-dark'> View All Journals</Button>
             </div>
           </div>
