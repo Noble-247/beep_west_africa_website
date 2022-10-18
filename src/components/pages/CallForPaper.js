@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Container } from "react-bootstrap";
 
 function CallForPaper() {
   return (
-    <div>
-      <h1>CallForPaper</h1>
-    </div>
+    <Fragment>
+      <Container>
+        <h1>CallForPaper</h1>
+      </Container>
+    </Fragment>
   );
 }
 

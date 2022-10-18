@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Container } from "react-bootstrap";
 
 function ContactUs() {
   return (
-    <div>
-      <h1>ContactUs</h1>
-    </div>
+    <Fragment>
+      <Container>
+        <h1>ContactUs</h1>
+      </Container>
+    </Fragment>
   );
 }
 
