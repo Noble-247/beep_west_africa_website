@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -16,24 +16,34 @@ function NavigationBar(props) {
   /* Modal State */
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  function handleClose() {
+    setShow(false);
+  }
+  function handleShow() {
+    setShow(true);
+  }
+
+  function signIn(event) {
+    console.log("successfully signed in!!");
+  }
 
   return (
     <Fragment>
       <Navbar className='bg-primary' expand='xl' variant='dark' sticky='top'>
         <Container>
-          <Navbar.Brand href='/' className='d-flex'>
-            <Image fluid src={Logo}></Image>
-            <div style={props.logoTextStyle}>
-              BEEP WEST AFRICA <br />
-              <span>INTERNATIONAL JOURNAL OF GLOBAL RESEARCH</span> <br />
-              <span>
-                (West Africa Unit Of BENEACADEMIC POOL & Publishings <br />
-                International Journal, JMI, New Dehli, India)
-              </span>
-            </div>
-          </Navbar.Brand>
+          <Link to={"/"}>
+            <Navbar.Brand className='d-flex'>
+              <Image fluid src={Logo}></Image>
+              <div style={props.logoTextStyle}>
+                BEEP WEST AFRICA <br />
+                <span>INTERNATIONAL JOURNAL OF GLOBAL RESEARCH</span> <br />
+                <span>
+                  (West Africa Unit Of BENEACADEMIC POOL & Publishings <br />
+                  International Journal, JMI, New Dehli, India)
+                </span>
+              </div>
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto' style={props.navFontSize}>
@@ -91,7 +101,11 @@ function NavigationBar(props) {
                 >
                   <i className='bi bi-search'></i>
                 </Button>
-                <Button className='btn btn-dark d-block' size='sm'>
+                <Button
+                  onClick={(event) => signIn(event)}
+                  className='btn btn-dark d-block'
+                  size='sm'
+                >
                   <Stack direction='horizontal' gap={3}>
                     <i className='bi bi-person-circle'></i>
                     <span>Sign In</span>
