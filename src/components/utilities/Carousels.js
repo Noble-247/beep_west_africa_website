@@ -10,7 +10,7 @@ function Carousels() {
   };
 
   return (
-    <div className='d-none d-md-block'>
+    <div className='d-none d-md-block p-0'>
       <Carousel fade>
         <Carousel.Item>
           <img
