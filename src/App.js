@@ -14,6 +14,8 @@ import SubmitManuscript from "./components/pages/SubmitManuscript";
 import ContactUs from "./components/pages/ContactUs";
 import PageNotFound from "./components/pages/PageNotFound";
 import JournalCategoryDetails from "./components/pages/JournalCategoryDetails";
+import Proceedings from "./components/pages/Proceedings";
+import Journals from "./components/pages/Journals";
 
 function App() {
   const logoTextStyle = {
@@ -75,14 +77,16 @@ function App() {
           <Container fluid className='px-0 pt-0 pb-2'>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='about_us' element={<AboutUs />} />
-              <Route path='call_for_paper' element={<CallForPaper />} />
+              <Route path='/about_us' element={<AboutUs />} />
+              <Route path='/call_for_paper' element={<CallForPaper />} />
               <Route path='submit_manuscript' element={<SubmitManuscript />} />
-              <Route path='contact_us' element={<ContactUs />} />
+              <Route path='/contact_us' element={<ContactUs />} />
               <Route
                 path='journal_category/:journal_category_ID'
                 element={<JournalCategoryDetails />}
               />
+              <Route path={"/journals"} element={<Journals />} />
+              <Route path='/proceedings' element={<Proceedings />} />
               <Route path='*' element={<PageNotFound />} />
             </Routes>
           </Container>

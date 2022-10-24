@@ -31,7 +31,7 @@ function NavigationBar(props) {
     <Fragment>
       <Navbar className='bg-primary' expand='xl' variant='dark' sticky='top'>
         <Container>
-          <Link to={"/"}>
+          <Link to={"/"} className='text-decoration-none'>
             <Navbar.Brand className='d-flex'>
               <Image fluid src={Logo}></Image>
               <div style={props.logoTextStyle}>
@@ -60,20 +60,20 @@ function NavigationBar(props) {
               <NavLink
                 style={props.navLinkStyle}
                 className='text-white nav-link border-end'
-                to={"/about_us"}
+                to={"/journals"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
               >
-                ABOUT US
+                JOURNALS
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
                 className='text-white nav-link border-end'
-                to={"/call_for_paper"}
+                to={"/proceedings"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
               >
-                CALL FOR PAPER
+                PROCEEDINGS
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
