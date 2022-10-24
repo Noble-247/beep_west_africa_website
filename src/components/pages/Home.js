@@ -6,8 +6,12 @@ import { Button, Container, Row } from "react-bootstrap";
 import Search from "../utilities/Search";
 import { Link } from "react-router-dom";
 
+import LatestPublishedArticle from "../utilities/LatestPublishedArticle";
+import useTitle from "../customHooks/useTitle";
+
 function Home() {
-  const JournalCategoties = JournalData.map((data) => {
+  useTitle("Beep West Africa | Home");
+  const JournalCategories = JournalData.map((data) => {
     return (
       <JournalCategory
         key={data.id}
@@ -57,7 +61,7 @@ function Home() {
         </Container>
       </div>
       <Container>
-        <Row className='mb-3'>{JournalCategoties}</Row>
+        <Row className='mb-3'>{JournalCategories}</Row>
         <Link to={"/"} className='text-decoration-none'>
           <div className='mb-3'>
             <div className='d-grid'>
@@ -66,6 +70,9 @@ function Home() {
           </div>
         </Link>
       </Container>
+      <section className='bg-white'>
+        <LatestPublishedArticle />
+      </section>
     </Fragment>
   );
 }
