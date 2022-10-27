@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Carousels from "../utilities/Carousels";
-import JournalData from "../../data/journals";
+import JournalData from "../../Database/journals";
 import JournalCategory from "../utilities/JournalCategory";
 import { Button, Container, Row } from "react-bootstrap";
 import Search from "../utilities/Search";

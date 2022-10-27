@@ -1,6 +1,8 @@
+/*TODO: ADD DYNAMIC PAGE TITLE FOR EACH JOURNAL CATEGORY  */
+
 import React, { Fragment } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import JournalData from "../../data/journals";
+import JournalData from "../../Database/journals";
 import { Container } from "react-bootstrap";
 
 function JournalCategoryDetails(props) {
