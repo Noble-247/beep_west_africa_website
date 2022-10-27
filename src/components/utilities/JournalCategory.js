@@ -11,7 +11,14 @@ function JournalCategory(props) {
           to={`/journal_category/${props.id}`}
         >
           <Card>
-            <Card.Img variant='top' src={props.image} />
+            <Card.Img
+              style={{ contentVisibility: "auto" }}
+              variant='top'
+              src={props.image}
+              loading='lazy'
+              decoding='async'
+              width={533}
+            />
             <Card.Body>
               <Card.Text>
                 <button className='btn btn-dark btn-sm d-block mx-auto'>
