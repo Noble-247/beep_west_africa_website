@@ -9,3 +9,7 @@
 .test-2 {
   background-color: rgba(30, 43, 55, 0.8) !important;
 }
+
+.test-3 {
+  color: hsla(271, 76%, 53%, 0.812);
+}
