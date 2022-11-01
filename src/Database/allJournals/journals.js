@@ -1,15 +1,15 @@
 /* TODO: ADD ALL PROPERTIES FOR EACH JOURNAL CATEGORY */
 
 //Journal Category Image Imports
-import CardiovascularImage from "../image/journal_photos/cardiovascular.jpg";
-import ComputerEngineeringImage from "../image/journal_photos/computer_engineering.jpg";
-import DentistryImage from "../image/journal_photos/dentistry.jpg";
-import LawImage from "../image/journal_photos/law.jpg";
-import MarineImage from "../image/journal_photos/marine-1.jpg";
-import NursingImage from "../image/journal_photos/nursing.jpg";
-import PharmacauticalImage from "../image/journal_photos/pharmacautical.jpg";
-import ScienceAndTechImage from "../image/journal_photos/science_and_tech.jpg";
-import VeterineryImage from "../image/journal_photos/veterinery.jpg";
+import CardiovascularImage from "../../image/journal_photos/cardiovascular.jpg";
+import ComputerEngineeringImage from "../../image/journal_photos/computer_engineering.jpg";
+import DentistryImage from "../../image/journal_photos/dentistry.jpg";
+import LawImage from "../../image/journal_photos/law.jpg";
+import MarineImage from "../../image/journal_photos/marine-1.jpg";
+import NursingImage from "../../image/journal_photos/nursing.jpg";
+import PharmacauticalImage from "../../image/journal_photos/pharmacautical.jpg";
+import ScienceAndTechImage from "../../image/journal_photos/science_and_tech.jpg";
+import VeterineryImage from "../../image/journal_photos/veterinery.jpg";
 
 //imports to determine how many journals have been published
 import africanJournalOfThoracicAndCardiovascularSurgery from "./AJOTACS/AJOTACS.js";
