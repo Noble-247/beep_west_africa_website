@@ -2,7 +2,7 @@
 
 import React, { Fragment } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import JournalData from "../../Database/journals";
+import JournalData from "../../Database/allJournals/journals";
 import { Container } from "react-bootstrap";
 
 function JournalCategoryDetails(props) {
