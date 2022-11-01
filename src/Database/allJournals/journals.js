@@ -34,6 +34,7 @@ const JournalData = [
     startYear: "2005",
     numberOfArticulesPublished:
       africanJournalOfThoracicAndCardiovascularSurgery.length,
+    articlesInThisCategory: africanJournalOfThoracicAndCardiovascularSurgery,
   },
   {
     id: 2,
@@ -46,6 +47,8 @@ const JournalData = [
     startYear: "2010",
     numberOfArticulesPublished:
       internationalJournalOfEngineeringAndComputerInnovations.length,
+    articlesInThisCategory:
+      internationalJournalOfEngineeringAndComputerInnovations,
   },
   {
     id: 3,
@@ -57,6 +60,7 @@ const JournalData = [
     ISSN: "1608-7232",
     startYear: "2016",
     numberOfArticlesPublished: africanJournalOfOralHealthSciences.length,
+    articlesInThisCategory: africanJournalOfOralHealthSciences,
   },
   {
     id: 4,
@@ -68,6 +72,7 @@ const JournalData = [
     ISSN: "2006-9804",
     startYear: "2009",
     numberOfArticlesPublished: journalOfLawAndConflictResolution.length,
+    articlesInThisCategory: journalOfLawAndConflictResolution,
   },
   {
     id: 5,
@@ -80,6 +85,7 @@ const JournalData = [
     startYear: "2010",
     numberOfArticlesPublished:
       internationalJournalOfOceanographyAndMaringScience.length,
+    articlesInThisCategory: internationalJournalOfOceanographyAndMaringScience,
   },
   {
     id: 6,
@@ -91,6 +97,7 @@ const JournalData = [
     ISSN: "2141-2456",
     startYear: "2009",
     numberOfArticlesPublished: internationalJournalOfNursingAndMidwifery.length,
+    articlesInThisCategory: internationalJournalOfNursingAndMidwifery,
   },
   {
     id: 7,
@@ -102,6 +109,7 @@ const JournalData = [
     ISSN: "1996-0816",
     startYear: "2007",
     numberOfArticlesPublished: africanJournalOfPharmacyAndPharmacology.length,
+    articlesInThisCategory: africanJournalOfPharmacyAndPharmacology,
   },
   {
     id: 8,
@@ -114,6 +122,7 @@ const JournalData = [
     startYear: "2010",
     numberOfArticlesPublished:
       internationJournalOfComputerEngineeringReaearch.length,
+    articlesInThisCategory: internationJournalOfComputerEngineeringReaearch,
   },
   {
     id: 9,
@@ -126,6 +135,7 @@ const JournalData = [
     startYear: "2009",
     numberOfArticlesPublished:
       journalOfVeterinaryMedicineAndAnimalHealth.length,
+    articlesInThisCategory: journalOfVeterinaryMedicineAndAnimalHealth,
   },
 ];
 
