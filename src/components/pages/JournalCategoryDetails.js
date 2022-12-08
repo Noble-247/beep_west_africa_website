@@ -1,9 +1,9 @@
 /*TODO: ADD DYNAMIC PAGE TITLE FOR EACH JOURNAL CATEGORY  */
 
 import React from "react";
-import { /* useNavigate, */ useParams } from "react-router-dom";
+import { /* useNavigate, */ Link, useParams } from "react-router-dom";
 import JournalData from "../../Database/allJournals/journals";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 function JournalCategoryDetails() {
   const { journal_category_ID } = useParams();
@@ -43,14 +43,31 @@ function JournalCategoryDetails() {
                 </section>
               </Container>
             </section>
-            <section>
-              {category.articlesInThisCategory.map((article) => {
+            <section className='mt-4'>
+              {category.articlesInThisCategory.map((articles) => {
                 return (
-                  <div key={article.id}>
-                    <Container>
-                      <h3>{article.topic}</h3>
-                    </Container>
-                  </div>
+                  <Container key={articles.id}>
+                    <Row>
+                      <Col className='my-3 bg-white p-3'>
+                        <h4 className='text-capitalize text-primary'>
+                          {articles.topic}
+                        </h4>
+                        <small className='fw-bold'>
+                          {articles.dateAccepted} - {articles.datePublished}
+                        </small>
+                        <p>{articles.abstract}</p>
+                        <small className='fw-bold'>
+                          Article Number: {articles.articleNumber}
+                        </small>
+                        <Link
+                          className='btn btn-dark d-block my-2'
+                          to={`/journal/${articles.id}`}
+                        >
+                          View Details
+                        </Link>
+                      </Col>
+                    </Row>
+                  </Container>
                 );
               })}
             </section>
