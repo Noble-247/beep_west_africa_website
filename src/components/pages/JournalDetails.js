@@ -77,6 +77,8 @@ function JournalDetails() {
                       </a>
                     </Container>
                   );
+                } else {
+                  return null;
                 }
               })}
             </section>
