@@ -1,3 +1,9 @@
+import comparisonBetweenUltrasoundGuidedRegionalAnaesthesiaAndGeneralAnaesthesia from "./files/comparison-between-ultrasound-guided-regional-anaesthesia-and-general-anaesthesia.pdf";
+import modifiedUltrafiltration from "./files/modified-ultrafiltration.pdf";
+import nativeArterioveneous from "./files/native-arterioveneous-fistulas.pdf";
+import useOfACompositeSurvivalCurveToDetermine from "./files/use-of-a-composite-survival-survival-curve-to-determine.pdf";
+import useOfACompositeSurvivalCurveToOptimize from "./files/use-of-a-composite-survival-survival-curve-to-optimise.pdf";
+
 const africanJournalOfThoracicAndCardiovascularSurgery = [
   {
     id: "AJOTACS-1",
@@ -5,7 +11,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
       "Modified ultrafiltration does not improve outcome of pediatric cardiac surgery: A meta-analysis",
     author:
       "Mark Nelson Awori, Jonathan Alan Awori, Pravin Momanyi Mokaya and Kimberly Kipkoech",
-    articleNumber: "Article Number: 579EA9369684",
+    articleNumber: "579EA9369684",
     dateRecieved: "15 August 2022",
     dateAccepted: "08 September 2022",
     datePublished: "30 September 2022",
@@ -14,6 +20,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
     keyWords: "Modified ultrafiltration, pediatric, cardiac surgery.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: modifiedUltrafiltration,
   },
   {
     id: "AJOTACS-2",
@@ -30,6 +37,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
     keyWords: "Pediatric, transposition great arteries, operative, outcomes.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: useOfACompositeSurvivalCurveToOptimize,
   },
   {
     id: "AJOTACS-3",
@@ -46,6 +54,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
     keyWords:
       "This study aim to report our experience in the fabrication of arteriovenous fistulas (AVF) by describing the operative technique and the immediate surgical results. The study carried out retrospective study of the records of 1467 patients who underwent AVF creation during the period from January 2008 to December 2020.  1396 patients (95.2%) had already been dialyzed with a central venous catheter for one month (1 and 6 months). The procedures were performed under local anesthesia. Distal radio-cephalic AVFs were performed in 92.2% of cases. The fabrication of a radio cephalic arteriovenous fistula was described. The arteriovenous fistulas were patented in 100% at the end of the procedure. We observed 3.1% complications in the immediate postoperative period. Morbidity was constituted by early thrombosis which represented 58.8% of complications followed by false aneurysms (27.5%), compressive hematomas (11.8%) and hemorrhages (1.9%). Fistulas complicated by thrombosis were reconnected. Treatment of the false aneurysm consisted of evacuation of the false aneurysm, surgical hemostasis, and removal of the AVF. The native arteriovenous fistula is the best access route for chronic hemodialysis. This procedure carries little risk. However, complications can be fatal, hence the interest of an early and adapted management of these complications. ",
     copywrite: "Arteriovenous fistula, hemodialysis, vascular access.",
+    file: nativeArterioveneous,
   },
   {
     id: "AJOTACS-4",
@@ -61,6 +70,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
     keyWords: "Pediatric, tetralogy of Fallot, operative, outcomes.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: useOfACompositeSurvivalCurveToDetermine,
   },
   {
     id: "AJOTACS-5",
@@ -78,6 +88,7 @@ const africanJournalOfThoracicAndCardiovascularSurgery = [
       "Brachial plexus block, arteriovenous fistula, ultrasound, cost of anaesthesia, patency.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: comparisonBetweenUltrasoundGuidedRegionalAnaesthesiaAndGeneralAnaesthesia,
   },
 ];
 

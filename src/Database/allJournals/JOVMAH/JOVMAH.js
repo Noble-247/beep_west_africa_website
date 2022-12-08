@@ -1,3 +1,9 @@
+import comparisonOfContrastRadiographyAndUltrasonography from "./files/compariaion-of-contrast-radiography-and-ultrasonography.pdf";
+import correlationBetweenMacruzIndexAndLeftAtrialEnlargmentinDogsWithMyoxmatousMitralValveDisease from "./files/correlation-between-macruz-index-and-left-atrial-enlargement-in-dogs-with-myxomatous-mitral-valve-disease.pdf";
+import entomopathogenicFungi from "./files/entomopathogenic-fungi.pdf";
+import interactionInTheProductionOfBiofilmAndDrugSuseptibilityOfCandidaWithEscgerichiaColiAndStreptococcus from "./files/interaction-in-the-production-of-biofilm-and-drug-susceptibility-of-candida-with-escherichia-coli-and-streptococcus.pdf";
+import brucellosisInfectionDynamicsInCattle from "./files/Brucellosis-infection-dynamics-in-cattles.pdf";
+
 const journalOfVeterinaryMedicineAndAnimalHealth = [
   {
     id: "JOVMAH-1",
@@ -14,6 +20,7 @@ const journalOfVeterinaryMedicineAndAnimalHealth = [
     keyWords: "Atrium, endocardiosis, macruz index, echocardiography.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: correlationBetweenMacruzIndexAndLeftAtrialEnlargmentinDogsWithMyoxmatousMitralValveDisease,
   },
   {
     id: "JOVMAH-2",
@@ -31,6 +38,7 @@ const journalOfVeterinaryMedicineAndAnimalHealth = [
       "Mastitis, Candida kefyr, Escherichia coli, Streptococcus dysgalactiae, biofilm, drug susceptibility",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: interactionInTheProductionOfBiofilmAndDrugSuseptibilityOfCandidaWithEscgerichiaColiAndStreptococcus,
   },
   {
     id: "JOVMAH-3",
@@ -48,6 +56,7 @@ const journalOfVeterinaryMedicineAndAnimalHealth = [
       "Aspergillus oryzae, bio-acaricide, entomopathogenic fungi, cattle, ticks, Tanzania.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: entomopathogenicFungi,
   },
   {
     id: "JOVMAH-4",
@@ -64,6 +73,7 @@ const journalOfVeterinaryMedicineAndAnimalHealth = [
       "Gastrointestinal obstruction, contrast radiography, ultrasonography, rabbits.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: comparisonOfContrastRadiographyAndUltrasonography,
   },
   {
     id: "JOVMAH-5",
@@ -79,6 +89,7 @@ const journalOfVeterinaryMedicineAndAnimalHealth = [
     keyWords: "Brucellosis impacts, incidence rate, seropositivity.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: brucellosisInfectionDynamicsInCattle,
   },
 ];
 

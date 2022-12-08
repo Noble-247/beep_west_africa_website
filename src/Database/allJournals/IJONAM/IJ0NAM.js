@@ -1,3 +1,9 @@
+import experienceOfALongTermFemalePsychiatricInPatientWithPsychiatricsymptomsInJapan from "./files/experience-of-a-long-term-female-psychiatric-in-patient-with-psychiatric-symptoms-in-japan.pdf";
+import perceptionOfClinicalNursesINANigerianTertiaryHospital from "./files/perception-of-clinical-nurses-in-a-nigerian-tertiary-hospital.pdf";
+import roleAndLeadershipOfNurseManagerImprovingTheQualityOfCareInBurkinaFaso from "./files/role-and-leadership-of-nurse-manager-inimproving-the-quality-of-care-in-burkina-faso.pdf";
+import salivaryCortisolPostpartiumPyschologocaStatusAndBondingAttachment from "./files/salivary-cortisol-postparttum-psychologoca-status-and-bonding-attachmentl.pdf";
+import staisfactionWithChildbirthCare from "./files/satisfaction-with-childbirth-care.pdf";
+
 const internationalJournalOfNursingAndMidwifery = [
   {
     id: "IJ0NAM-1",
@@ -14,6 +20,7 @@ const internationalJournalOfNursingAndMidwifery = [
       "SERVICEQUAL, mother’s satisfaction, childbirth-care, service perceptions, service expectations.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: staisfactionWithChildbirthCare,
   },
   {
     id: "IJ0NAM-2",
@@ -31,6 +38,7 @@ const internationalJournalOfNursingAndMidwifery = [
       "Nurse manager, role, leadership, care quality improvement, hospital, pediatric.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: roleAndLeadershipOfNurseManagerImprovingTheQualityOfCareInBurkinaFaso,
   },
   {
     id: "IJ0NAM-3",
@@ -46,6 +54,7 @@ const internationalJournalOfNursingAndMidwifery = [
     keyWords: "Postpartum depression, stress, anxiety, cortisol.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: salivaryCortisolPostpartiumPyschologocaStatusAndBondingAttachment,
   },
   {
     id: "IJ0NAM-4",
@@ -62,6 +71,7 @@ const internationalJournalOfNursingAndMidwifery = [
       "Psychiatric hospital, long-term hospitalized in-patient, mental symptoms, experiences, phenomenology.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.     This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: experienceOfALongTermFemalePsychiatricInPatientWithPsychiatricsymptomsInJapan,
   },
   {
     id: "IJ0NAM-5",
@@ -79,6 +89,7 @@ const internationalJournalOfNursingAndMidwifery = [
       "Perception, clinical nurses, mandatory continuing professional development program, Nigerian tertiary hospital.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: perceptionOfClinicalNursesINANigerianTertiaryHospital,
   },
 ];
 

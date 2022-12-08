@@ -45,7 +45,7 @@ const JournalData = [
     language: "English",
     ISSN: "2141-6508",
     startYear: "2010",
-    numberOfArticulesPublished:
+    numberOfArticlesPublished:
       internationalJournalOfEngineeringAndComputerInnovations.length,
     articlesInThisCategory:
       internationalJournalOfEngineeringAndComputerInnovations,

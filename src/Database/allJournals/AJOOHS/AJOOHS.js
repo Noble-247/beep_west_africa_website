@@ -1,3 +1,10 @@
+/* PDF file imports */
+import riskFactorsAndComplicationsAssociatedWithDentalExtraction from "./files/risk-factors-and-complications-associated-with-dental-extraction.pdf";
+import perceptionAndAttitudeOfSudaneseDentists from "./files/perception-and-attitude-of-sudanese-dentists.pdf";
+import awarenessOnDentalRadiographicExaminationAndAssociatedHealthRisk from "./files/awareness-on-dental-radiographic-examination-and-associated-health-risks.pdf";
+import pregnancyEpulis from "./files/pregnancy-epulis.pdf";
+import computerAidedAnd3DPrintingTechnologies from "./files/computer-aided-and-3d-printing-technologies.pdf";
+
 const africanJournalOfOralHealthSciences = [
   {
     id: "AJOOHS-1",
@@ -15,6 +22,7 @@ const africanJournalOfOralHealthSciences = [
       "Tooth extraction, Complications, Hemorrhage, Alveolitis, epidemiology, therapy, Cameroon.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: riskFactorsAndComplicationsAssociatedWithDentalExtraction,
   },
   {
     id: "AJOOHS-2",
@@ -30,6 +38,7 @@ const africanJournalOfOralHealthSciences = [
     keyWords: "Sudanese dentists, perception, practice, attitude, COVID-19.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: perceptionAndAttitudeOfSudaneseDentists,
   },
   {
     id: "AJOOHS-3",
@@ -45,6 +54,7 @@ const africanJournalOfOralHealthSciences = [
     keyWords: "Awareness, dental X-ray examination, Muhimbili, Tanzania.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.     This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: awarenessOnDentalRadiographicExaminationAndAssociatedHealthRisk,
   },
   {
     id: "AJOOHS-4",
@@ -60,6 +70,7 @@ const africanJournalOfOralHealthSciences = [
     keyWords: "Pregnancy, epulis, gingivae, women, tumour, Kaduna.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: pregnancyEpulis,
   },
   {
     id: "AJOOHS-5",
@@ -75,6 +86,7 @@ const africanJournalOfOralHealthSciences = [
     keyWords: "",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: computerAidedAnd3DPrintingTechnologies,
   },
 ];
 export default africanJournalOfOralHealthSciences;

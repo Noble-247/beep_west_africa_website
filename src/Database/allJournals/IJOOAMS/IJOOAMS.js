@@ -1,7 +1,14 @@
+import detectionAndSpatioTemporalVariationOfMarineHeatweavesInTheGulfOfGuinea from "./files/detection-and-spatio-temporal-variation-of-marine-heatwaves-in-the-gulf-of-guinea.pdf";
+import heavyMetalConcentrationAndPublicHealthRiskInConsumingSardine from "./files/heavy-metal-concentration-and-public-health-risk-in-consuming-sardine.pdf";
+import influenceOfClimaticFactorsOnSargassumArrivalsToTheCoastOfDeminicanRepublic from "./files/influence-of-climatic-factors-on-sargassum-arrivals-to-the-coast-of-dominican-republic.pdf";
+import longTermChangesInGalatiousZooplanktonInTheSouthernCaspianSea from "./files/long-term-changes-in-gelatinous-zooplankton--inithe-southern-caspian-sea.pdf";
+import spatialViriabilityInAutumnalEquatorialUpwellingIntensityWithinTheGulfOfGuinea from "./files/spatial-variability-in-autumnal-equatorial-upwelling-intensity-within-the-gulf-of-guinea.pdf";
+
 const internationalJournalOfOceanographyAndMaringScience = [
   {
     id: "IJOOAMS-1",
-    topic: "Caspian Sea: Environmental controls and trophic webs interactions",
+    topic:
+      "long term changes in gelatinous zooplankton inithe southern caspian sea",
     author:
       "Aboulghasem Roohi, Ahmet Erkan Kideys, Mehdi Naderi Jolodar, Mohammadali Afraei Bandpei and Ali Mokarami Rostami",
     articleNumber: "9C1E37167536",
@@ -14,6 +21,7 @@ const internationalJournalOfOceanographyAndMaringScience = [
       "Gelatinous zooplankton, abundance and biomass, temperature, Caspian Sea.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: longTermChangesInGalatiousZooplanktonInTheSouthernCaspianSea,
   },
   {
     id: "IJOOAMS-2",
@@ -30,6 +38,7 @@ const internationalJournalOfOceanographyAndMaringScience = [
       "Heavy metals, bioaccumulation, Niger Delta, Bonny Estuary, fishes, food chain.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: heavyMetalConcentrationAndPublicHealthRiskInConsumingSardine,
   },
   {
     id: "IJOOAMS-3",
@@ -46,6 +55,7 @@ const internationalJournalOfOceanographyAndMaringScience = [
       "Marine heatwaves, extreme events, Gulf of Guinea, climate change, remotely-sensed SST.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: detectionAndSpatioTemporalVariationOfMarineHeatweavesInTheGulfOfGuinea,
   },
   {
     id: "IJOOAMS-4",
@@ -61,6 +71,7 @@ const internationalJournalOfOceanographyAndMaringScience = [
     keyWords: "Sargassum arrival, Caribbean, Dominican Republic, Azore High.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: influenceOfClimaticFactorsOnSargassumArrivalsToTheCoastOfDeminicanRepublic,
   },
   {
     id: "IJOOAMS-5",
@@ -77,6 +88,7 @@ const internationalJournalOfOceanographyAndMaringScience = [
       "Vertical mixing, zonal advection, equatorial undercurrent, equatorial upwelling, Gulf of Guinea, nutrients, phytoplankton biomass, surface enrichment.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: spatialViriabilityInAutumnalEquatorialUpwellingIntensityWithinTheGulfOfGuinea,
   },
 ];
 

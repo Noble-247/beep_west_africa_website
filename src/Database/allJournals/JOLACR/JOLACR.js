@@ -1,3 +1,9 @@
+import aCounterbalanceBetweenTheUnionsRightToDisClosureOfInformationAndEmployeesRightToInformation from "./files/a-counterbalance-between-the-unions-right-to-disclosure-of-information-and-employees-right-to-information.pdf";
+import exploringTheChallengesAndLimitesInTheComplianceWithTransitionalPost2018Ethiopia from "./files/exploring-the-challenges-and-limits-in-the-compliancewith-transitional-justice--post-2018-ethiopia.pdf";
+import humanRightsPerpectiveOfIndianDalits from "./files/human-rights-perspective-of-indian-dalits.pdf";
+import managementOfEthnicConflictInEthiopiaTheCaseOfAmharaAndoromoEthnicProups from "./files/management-of-ethnic-conflict-in-ethiopia--the-case-of-amhara-and-oromo-ethnic-groups.pdf";
+import stateFrajilityFailureAndCollaoseInTheNewWorldOrder from "./files/state-frajility-failure-and-collapse-in-the-new-world-order.pdf";
+
 const journalOfLawAndConflictResolution = [
   {
     id: "IJOLACR-1",
@@ -14,6 +20,7 @@ const journalOfLawAndConflictResolution = [
       "Transitional justice, compliance, challenges, Ethiopia, non-regime transition.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: exploringTheChallengesAndLimitesInTheComplianceWithTransitionalPost2018Ethiopia,
   },
   {
     id: "IJOLACR-2",
@@ -30,6 +37,7 @@ const journalOfLawAndConflictResolution = [
       "Ethnic conflict, Amhara, Oromo, ethnic federalism, narratives, symbolic politics, ethnic entrepreneurs.",
     copywrite:
       "Management of ethnic conflict in Ethiopia: The case of Amhara and Oromo ethnic groups. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: managementOfEthnicConflictInEthiopiaTheCaseOfAmharaAndoromoEthnicProups,
   },
   {
     id: "IJOLACR-3",
@@ -46,6 +54,7 @@ const journalOfLawAndConflictResolution = [
       "Fragile state, failed state, collapsed state, Ethiopia, Democratic Republic of Congo (DRC), Somalia, developed and developing states.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.  This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: stateFrajilityFailureAndCollaoseInTheNewWorldOrder,
   },
   {
     id: "IJOLACR-4",
@@ -62,6 +71,7 @@ const journalOfLawAndConflictResolution = [
       "disclosure, confidentiality, privacy, access to information, negotiations.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: aCounterbalanceBetweenTheUnionsRightToDisClosureOfInformationAndEmployeesRightToInformation,
   },
   {
     id: "IJOLACR-5",
@@ -77,6 +87,7 @@ const journalOfLawAndConflictResolution = [
       "Untouchables, caste discrimination, Dalits, empowerment, human rights violations.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: humanRightsPerpectiveOfIndianDalits,
   },
 ];
 

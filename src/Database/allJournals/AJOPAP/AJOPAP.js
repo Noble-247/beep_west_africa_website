@@ -1,3 +1,10 @@
+/* PDF File Imports */
+import inVivoStudiesOfTheImmunomodulatoryEffectOfAqueousExtract from "./files/in-vivo-studies-of-the-immunomodulatory-effect-of-aqueous-extract.pdf";
+import maternalFetalrepercussionOfAngylocalxOligophyLeaves from "./files/maternal-fetal-repercussions-of-angylocalyx-oligophy-leaves.pdf";
+import evaluationOfThePharmaceuticalQualityOfTwoNutraceuticalLysineProducts from "./files/evaluation-of-the-pharmaceutical-quality-of-two-nutraceutical-lysine-products.pdf";
+import characterizationOfNativeAcetylatedAndEnzymaticallyModifiedAmuraStarch from "./files/characterization-of-native-acetylated-and-enzymatically-modified-amura-starch.pdf";
+import dynamicsOfHerbalNedicineProcessing from "./files/dynamics-of-herbal-medicine-processing.pdf";
+
 const africanJournalOfPharmacyAndPharmacology = [
   {
     id: "AJOPAP-1",
@@ -15,6 +22,7 @@ const africanJournalOfPharmacyAndPharmacology = [
       "Artemisia herba alba, Immunomodulatory effect, In vivo, pro-inflammatory effect, antibodies production, aqueous extract.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: inVivoStudiesOfTheImmunomodulatoryEffectOfAqueousExtract,
   },
   {
     id: "AJOPAP-2",
@@ -32,6 +40,7 @@ const africanJournalOfPharmacyAndPharmacology = [
       "Angylocalyx oligophyllus, toxic effects, pregnancy, embryo-fetal development.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: maternalFetalrepercussionOfAngylocalxOligophyLeaves,
   },
   {
     id: "AJOPAP-3",
@@ -47,6 +56,7 @@ const africanJournalOfPharmacyAndPharmacology = [
     keyWords: "Nutraceuticals, pharmaceutical quality, L-lysine.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: evaluationOfThePharmaceuticalQualityOfTwoNutraceuticalLysineProducts,
   },
   {
     id: "AJOPAP-4",
@@ -64,6 +74,7 @@ const africanJournalOfPharmacyAndPharmacology = [
       "NAS = Amura Starch (Tacca involucrate), EHS = Enzyme hydrolysed Starch, AS = Acetylate Starch, MS = Maize starch, Amylose, Amylopectin, Paracetamol tablet and BP= British Pharmacopia.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: characterizationOfNativeAcetylatedAndEnzymaticallyModifiedAmuraStarch,
   },
   {
     id: "AJOPAP-5",
@@ -80,6 +91,7 @@ const africanJournalOfPharmacyAndPharmacology = [
       "Herbal medicine, Benue State, herbal active ingredients, formulation, conventional dosage form, water supply.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: dynamicsOfHerbalNedicineProcessing,
   },
 ];
 

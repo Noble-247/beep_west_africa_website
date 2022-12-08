@@ -1,3 +1,9 @@
+import analysisAndResultOfClassificationAlgorithmOnEmailClassification from "./files/analysis-and-result-of-classification-algorithm-on-email-classification.pdf";
+import frameworkForIntegratingFragmentedInformationSystems from "./files/framework-for-integrating-fragmented-information-systems.pdf";
+import inSilicoStudyOfMitochobndrialAndChloroplast from "./files/in-silico-study-in-mitochondrial-and-chloroplast.pdf";
+import issuesInATransactionaldatabasEmanationFromDataWarehouseProtect from "./files/issues-in-a-transactional-database-emanating-from-data-warehouse-project.pdf";
+import realTimeOperatingSystemWithApplicationToPlayModels from "./files/real-time-operating-system-with-application-to-play-models.pdf";
+
 const internationJournalOfComputerEngineeringReaearch = [
   {
     id: "IJOCER-1",
@@ -14,6 +20,7 @@ const internationJournalOfComputerEngineeringReaearch = [
       "WEKA, classifier, K-nearest neighbor (KNN), support vector machines (SVM), Naïve Bayesian (NB), boosting.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: analysisAndResultOfClassificationAlgorithmOnEmailClassification,
   },
   {
     id: "IJOCER-2",
@@ -30,6 +37,7 @@ const internationJournalOfComputerEngineeringReaearch = [
       "Information System (IS), applications, framework, fragment, fragmented IS.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: frameworkForIntegratingFragmentedInformationSystems,
   },
   {
     id: "IJOCER-3",
@@ -46,6 +54,7 @@ const internationJournalOfComputerEngineeringReaearch = [
       "Chloroplast, mitochondria, simple sequence repeats (SSRs), microsatellites, plants.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: inSilicoStudyOfMitochobndrialAndChloroplast,
   },
   {
     id: "IJOCER-4",
@@ -62,6 +71,7 @@ const internationJournalOfComputerEngineeringReaearch = [
       "Data bases, data mining, basic sciences, data warehouse, inconsistency.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: issuesInATransactionaldatabasEmanationFromDataWarehouseProtect,
   },
   {
     id: "IJOCER-5",
@@ -77,6 +87,7 @@ const internationJournalOfComputerEngineeringReaearch = [
       "Operating system (OS), play model, real-time, real-time operating system (RTOS) performance, RTOS criteria.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: realTimeOperatingSystemWithApplicationToPlayModels,
   },
 ];
 

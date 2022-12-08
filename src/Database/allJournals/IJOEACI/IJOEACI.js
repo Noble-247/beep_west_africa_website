@@ -1,3 +1,9 @@
+import comparisonAndPerformanceAnalysisOfReactiveTypeAndProactiveType from "./files/comparison-and-performance-analysis-of-reactive-type-and-proactive-type.pdf";
+import creatingEPedegreeKabanToSecureCustomersChain from "./files/creating-e-pedigree-kanban-to-secure-customers-chain.pdf";
+import noticeOfRetractionRodentSQL from "./files/notice-of-retraction-rodentSQL-.pdf";
+import optimizationOfSpatialJoinConstraintsBasedlusteringTechniques from "./files/optimization-of-spatial-join-using-constraints-based-clustering-techniques.pdf";
+import transitionOfSoilMoistureEstimationTheoryToPracticalApplication from "./files/transition-of-soil-moisture-estimation-theory-to-practical-application.pdf";
+
 const internationalJournalOfEngineeringAndComputerInnovations = [
   {
     id: "IJOEACI-1",
@@ -14,6 +20,7 @@ const internationalJournalOfEngineeringAndComputerInnovations = [
       "Precision irrigation, precision agriculture, distributed systems, water conservation, soil moisture, evapotranspiration, adaptive automation, embedded systems",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: transitionOfSoilMoistureEstimationTheoryToPracticalApplication,
   },
   {
     id: "IJOEACI-2",
@@ -29,6 +36,7 @@ const internationalJournalOfEngineeringAndComputerInnovations = [
     keyWords: "",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article.This article is published under the terms of the Creative Commons Attribution License 4.0",
+    file: noticeOfRetractionRodentSQL,
   },
   {
     id: "IJOEACI-3",
@@ -45,6 +53,7 @@ const internationalJournalOfEngineeringAndComputerInnovations = [
       "China items adulteration, supply chain, multi-agent systems, E-Kanban, e-pedigree.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    creatingEPedegreeKabanToSecureCustomersChain,
   },
   {
     id: "IJOEACI-4",
@@ -60,6 +69,7 @@ const internationalJournalOfEngineeringAndComputerInnovations = [
     keyWords: "Wireless mobile, routing protocols, mobile ad hoc networks",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: comparisonAndPerformanceAnalysisOfReactiveTypeAndProactiveType,
   },
   {
     id: "IJOEACI-5",
@@ -76,6 +86,7 @@ const internationalJournalOfEngineeringAndComputerInnovations = [
       "Spatial data mining, spatial clustering, spatial queries, spatial join",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0.",
+    file: optimizationOfSpatialJoinConstraintsBasedlusteringTechniques,
   },
 ];
 
