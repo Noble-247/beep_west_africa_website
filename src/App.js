@@ -21,14 +21,14 @@ import JournalDetails from "./components/pages/JournalDetails";
 function App() {
   const logoTextStyle = {
     fontSize: "9px",
-    fontWeight: "bold",
+    fontWeight: "bolder",
     marginLeft: "4px",
   };
 
   /* active class style */
   function navLinkStyle({ isActive }) {
     return {
-      fontWeight: isActive ? "bolder" : "normal",
+      fontWeight: isActive ? "800" : "bolder",
     };
   }
   /* Navigation Font Size */
@@ -38,13 +38,11 @@ function App() {
 
   function mouseEnterEventOnNavBar(event) {
     event.target.style.backgroundColor = "rgba(30, 193, 219, 0.8)";
-    // event.target.style.fontWeight = "bold";
     event.target.style.transition = "0.5s";
     event.target.style.transition = "transition-timing-function: ease-in-out";
   }
   function mouseLeaveEventOnNavBar(event) {
     event.target.style.backgroundColor = "#17a2b8";
-    // event.target.style.fontWeight = "normal";
     event.target.style.transition = "0.5s";
     event.target.style.transition = "transition-timing-function: ease-in-out";
   }
