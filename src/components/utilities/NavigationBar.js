@@ -50,7 +50,7 @@ function NavigationBar(props) {
               <NavLink
                 style={props.navLinkStyle}
                 end
-                className='text-white nav-link border-end'
+                className='text-white nav-link'
                 to={"/"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
@@ -59,7 +59,7 @@ function NavigationBar(props) {
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
-                className='text-white nav-link border-end'
+                className='text-white nav-link'
                 to={"/journals"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
@@ -68,7 +68,7 @@ function NavigationBar(props) {
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
-                className='text-white nav-link border-end'
+                className='text-white nav-link'
                 to={"/proceedings"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
@@ -77,7 +77,7 @@ function NavigationBar(props) {
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
-                className='text-white nav-link border-end'
+                className='text-white nav-link'
                 to={"/submit_manuscript"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
@@ -86,7 +86,7 @@ function NavigationBar(props) {
               </NavLink>
               <NavLink
                 style={props.navLinkStyle}
-                className='text-white nav-link border-end'
+                className='text-white nav-link'
                 to={"/contact_us"}
                 onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
