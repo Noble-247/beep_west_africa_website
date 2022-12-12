@@ -26,9 +26,9 @@ function Search() {
         <Row className='justify-content-center'>
           <Col md={10}>
             <Form>
-              <InputGroup size='lg' className='mb-3 bg-light'>
+              <InputGroup size='lg' className='mb-3'>
                 <Form.Control
-                  className='bg-dark text-white'
+                  className='bg-dark text-white border-0'
                   type='text'
                   name='journalName'
                   value={searchData.journalName}
