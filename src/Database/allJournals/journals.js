@@ -32,7 +32,7 @@ const JournalData = [
     language: "English",
     ISSN: "1994-7461",
     startYear: "2005",
-    numberOfArticulesPublished:
+    numberOfArticlesPublished:
       africanJournalOfThoracicAndCardiovascularSurgery.length,
     articlesInThisCategory: africanJournalOfThoracicAndCardiovascularSurgery,
   },
