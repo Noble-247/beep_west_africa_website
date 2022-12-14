@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Carousels from "../utilities/Carousels";
 import JournalData from "../../Database/allJournals/journals";
 import JournalCategory from "../utilities/JournalCategory";
-import { Button, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Search from "../utilities/Search";
 import { Link } from "react-router-dom";
 
@@ -11,17 +11,6 @@ import useTitle from "../customHooks/useTitle";
 
 function Home() {
   useTitle("Beep West Africa | Home");
-  const JournalCategories = JournalData.map((data) => {
-    return (
-      <JournalCategory
-        key={data.id}
-        image={data.image}
-        title={data.title}
-        category={data.category}
-        id={data.id}
-      />
-    );
-  });
   // console.log(JournalCategoties);
   const iconStyles = {
     fontSize: "50px",
@@ -61,11 +50,25 @@ function Home() {
         </Container>
       </div>
       <Container>
-        <Row className='mb-3'>{JournalCategories}</Row>
+        <Row className='mb-3'>
+          {JournalData.map((data) => {
+            return (
+              <JournalCategory
+                key={data.id}
+                image={data.image}
+                title={data.title}
+                category={data.category}
+                id={data.id}
+              />
+            );
+          })}
+        </Row>
         <Link to={"/"} className='text-decoration-none'>
           <div className='mb-3'>
             <div className='d-grid'>
-              <Button className='btn btn-dark'> View All Journals</Button>
+              <Link to={"/journals"} className='btn btn-dark'>
+                View All Journals
+              </Link>
             </div>
           </div>
         </Link>
