@@ -1,3 +1,15 @@
+/* File Imports */
+import AssessmentOfPhysicochemicalPropertiesOfClaySamples from "./files/Assessment-of-physicochemical-properties-of-clay-samples.pdf";
+import AssessmentOfRainwaterQuality from "./files/Assessment-of-rainwater-quality.pdf";
+import CharacteristicsOfBeachWaterAndItsEffect from "./files/Characterization-of-beach-water-and-its-effect.pdf";
+import ConcentrationLevelOfPhosphateAndNitrateInOkpobaRiverOfEdoStateNigeria from "./files/Concentration-level-of-phosphate-and-nitrate-in-Ikpoba-River-of-Edo-State-Nigeria.pdf";
+import GroundQualityInOkitipupaTownshipOfOndoStateNigeria from "./files/Groundwater-quality-in-Okitipupa-township-of-Ondo-State-Nigeria.pdf";
+import IsolationAndCharacterizationOf_2_4_DihydroxycinnamicAcid from "./files/Isolation-and-characterization-of-2-4-dihydroxycinnamic-acid.pdf";
+import NanotechnologyAndImplementationInNaturalProduction from "./files/Nanotechnology-and-implementation-in-natural-products.pdf";
+import ProductionOfMethylester_Biodiesel_UsingMelonSeedOilAsRawMaterial from "./files/Production-of-methylester-(biodiesel)-using-melon-seed-oil-as-a-raw-material.pdf";
+import SorptionKineticsOfMethyleneBlue from "./files/Sorption-kinetics-of-methylene-blue.pdf";
+import SynthesisCharacterizationAndBiologicalActivityOfNewMannichBase_1 from "./files/Synthesis-characterization-and-biological-activity-of-new-mannich-base-1.pdf";
+
 const proceedings = [
   {
     id: 1,
@@ -12,7 +24,7 @@ const proceedings = [
     keywords: "Eutrophication, nutrients, phosphate, nitrate.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: ConcentrationLevelOfPhosphateAndNitrateInOkpobaRiverOfEdoStateNigeria,
   },
   {
     id: 2,
@@ -27,7 +39,7 @@ const proceedings = [
       "Assessment, bacteriological, Bichi, drinking, properties, rainwater, water.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: AssessmentOfRainwaterQuality,
   },
   {
     id: 3,
@@ -41,7 +53,7 @@ const proceedings = [
     keywords: "Mannich base, succinimide, antimicrobial.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: SynthesisCharacterizationAndBiologicalActivityOfNewMannichBase_1,
   },
   {
     id: 4,
@@ -56,7 +68,7 @@ const proceedings = [
       "Bentonite, montmorillonite, smectite, cation exchange capacity (CEC), swelling power, chemical composition.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: AssessmentOfPhysicochemicalPropertiesOfClaySamples,
   },
   {
     id: 5,
@@ -71,7 +83,7 @@ const proceedings = [
     keywords: "Nanotechnology, green synthesis, natural products.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: NanotechnologyAndImplementationInNaturalProduction,
   },
   {
     id: 6,
@@ -85,7 +97,7 @@ const proceedings = [
     keywords: "Characterization, groundwater, seawater, intrusion, standard.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: CharacteristicsOfBeachWaterAndItsEffect,
   },
   {
     id: 7,
@@ -99,7 +111,7 @@ const proceedings = [
     keywords: "Biodisel, transeterification, methyl ester.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: ProductionOfMethylester_Biodiesel_UsingMelonSeedOilAsRawMaterial,
   },
   {
     id: 8,
@@ -114,12 +126,12 @@ const proceedings = [
       "Adsorption, Delonix regia, kinetics, methylene blue, Vigna subterranean",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: SorptionKineticsOfMethyleneBlue,
   },
   {
     id: 9,
     title: "39th CSN Annual International Conference",
-    topic: "Groundwater qualityin Okitipupa township of Ondo State, Nigeria",
+    topic: "Groundwater quality in Okitipupa township of Ondo State, Nigeria",
     author: "Ayedun H. and Ediagbonya T. F.",
     articleNumber: "3EACE68",
     abstract:
@@ -127,7 +139,7 @@ const proceedings = [
     keywords: "Groundwater, Okitipupa, metal index, anions, Ondo State.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: GroundQualityInOkitipupaTownshipOfOndoStateNigeria,
   },
   {
     id: 1,
@@ -142,7 +154,7 @@ const proceedings = [
       "2,4-Dihydroxycinnamic acid, Adina microcephala, Rubiaceae, stem bark.",
     copywrite:
       "Copyright © 2022 Author(s) retain the copyright of this article. This article is published under the terms of the Creative Commons Attribution License 4.0",
-    file: "",
+    file: IsolationAndCharacterizationOf_2_4_DihydroxycinnamicAcid,
   },
 ];
 
