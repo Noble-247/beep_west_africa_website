@@ -6,8 +6,8 @@ function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
   return (
     <Fragment>
-      <Container>
-        <h1>Proceedings</h1>
+      <Container fluid className='bg-black text-white text-center p-5'>
+        <h1>PROCEEDINGS</h1>
       </Container>
     </Fragment>
   );
