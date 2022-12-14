@@ -87,6 +87,7 @@ function App() {
               <Route path='/journal/:journal_ID' element={<JournalDetails />} />
               <Route path={"/journals"} element={<Journals />} />
               <Route path='/proceedings' element={<Proceedings />} />
+              <Route path='/proceedings/proceeding_ID' />
               <Route path='*' element={<PageNotFound />} />
             </Routes>
           </Container>
