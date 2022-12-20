@@ -17,6 +17,7 @@ import JournalCategoryDetails from "./components/pages/JournalCategoryDetails";
 import Proceedings from "./components/pages/Proceedings";
 import Journals from "./components/pages/Journals";
 import JournalDetails from "./components/pages/JournalDetails";
+import ProceedingDetails from "./components/pages/ProceedingDetails";
 
 function App() {
   const logoTextStyle = {
@@ -85,9 +86,12 @@ function App() {
                 element={<JournalCategoryDetails />}
               />
               <Route path='/journal/:journal_ID' element={<JournalDetails />} />
-              <Route path={"/journals"} element={<Journals />} />
+              <Route path='/journals' element={<Journals />} />
               <Route path='/proceedings' element={<Proceedings />} />
-              <Route path='/proceedings/proceeding_ID' />
+              <Route
+                path='/proceeding/:proceeding_ID'
+                element={<ProceedingDetails />}
+              />
               <Route path='*' element={<PageNotFound />} />
             </Routes>
           </Container>
