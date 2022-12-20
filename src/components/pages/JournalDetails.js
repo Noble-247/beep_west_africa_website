@@ -28,18 +28,21 @@ function JournalDetails() {
                   <span>{category.title}</span>
                   <span>{category.category}</span>
                 </h1>
-                <Container className='fw-bold d-flex flex-wrap justify-content-center'>
+                <Container className='d-flex flex-wrap justify-content-center'>
                   <p className='text-center flex-grow-1'>
-                    Language: {category.language}
+                    <span className='fw-bold'>Language:</span>{" "}
+                    {category.language}
                   </p>
                   <p className='text-center flex-grow-1'>
-                    ISSN: {category.ISSN}
+                    <span className='fw-bold'> ISSN:</span> {category.ISSN}
                   </p>
                   <p className='text-center flex-grow-1'>
-                    Start Year: {category.startYear}
+                    <span className='fw-bold'>Start Year:</span>{" "}
+                    {category.startYear}
                   </p>
                   <p className='text-center flex-grow-1'>
-                    Articles Published: {category.numberOfArticlesPublished}
+                    <span className='fw-bold'>Articles Published:</span>{" "}
+                    {category.numberOfArticlesPublished}
                   </p>
                 </Container>
               </Container>
