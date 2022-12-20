@@ -12,7 +12,7 @@ function JournalCategoryDetails() {
   /*  const navigate = useNavigate(); */
 
   const thisJournalCategory = JournalData.filter((obj) => {
-    return obj.id === parseInt(journal_category_ID);
+    return obj.id === Number(journal_category_ID);
   });
   //   console.log(thisJournalCategory);
 
@@ -27,20 +27,20 @@ function JournalCategoryDetails() {
                   <span>{category.title}</span>
                   <span>{category.category}</span>
                 </h1>
-                <section className='text-center'>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                <Container className='fw-bold d-flex flex-wrap justify-content-center'>
+                  <p className='text-center flex-grow-1'>
                     Language: {category.language}
                   </p>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                  <p className='text-center flex-grow-1'>
                     ISSN: {category.ISSN}
                   </p>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                  <p className='text-center flex-grow-1'>
                     Start Year: {category.startYear}
                   </p>
-                  <p className='d-inline-block me-4 pe-3'>
+                  <p className='text-center flex-grow-1'>
                     Articles Published: {category.numberOfArticlesPublished}
                   </p>
-                </section>
+                </Container>
               </Container>
             </section>
             <section className='mt-4'>

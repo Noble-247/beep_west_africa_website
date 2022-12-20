@@ -28,23 +28,23 @@ function JournalDetails() {
                   <span>{category.title}</span>
                   <span>{category.category}</span>
                 </h1>
-                <section className='text-center'>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                <Container className='fw-bold d-flex flex-wrap justify-content-center'>
+                  <p className='text-center flex-grow-1'>
                     Language: {category.language}
                   </p>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                  <p className='text-center flex-grow-1'>
                     ISSN: {category.ISSN}
                   </p>
-                  <p className='d-inline-block me-4 pe-3 border-end'>
+                  <p className='text-center flex-grow-1'>
                     Start Year: {category.startYear}
                   </p>
-                  <p className='d-inline-block me-4 pe-3'>
+                  <p className='text-center flex-grow-1'>
                     Articles Published: {category.numberOfArticlesPublished}
                   </p>
-                </section>
+                </Container>
               </Container>
             </section>
-            <section className='mt-4'>
+            <Container className='mt-4 bg-white p-3'>
               {category.articlesInThisCategory.map((article) => {
                 if (article.id === journal_ID) {
                   return (
@@ -53,20 +53,24 @@ function JournalDetails() {
                       <small className='fw-bold text-center d-block'>
                         {article.author}
                       </small>
-                      <section className='d-flex justify-content-between'>
-                        <span className='d-block'>
-                          Article Number: {article.articleNumber}
-                        </span>
-                        <span className='d-block'>
-                          Recieved: {article.dateRecieved}
-                        </span>
-                        <span className='d-block'>
-                          Accepted: {article.dateAccepted}
-                        </span>
-                        <span className='d-block'>
-                          Published: {article.datePublished}
-                        </span>
-                      </section>
+                      <Container className='d-flex flex-wrap justify-content-center mt-3'>
+                        <p className='text-center flex-grow-1'>
+                          <span className='fw-bold'>Article Number:</span>{" "}
+                          {article.articleNumber}
+                        </p>
+                        <p className='text-center flex-grow-1'>
+                          <span className='fw-bold'>Recieved: </span>{" "}
+                          {article.dateRecieved}
+                        </p>
+                        <p className='text-center flex-grow-1'>
+                          <span className='fw-bold'>Accepted:</span>{" "}
+                          {article.dateAccepted}
+                        </p>
+                        <p className='text-center flex-grow-1'>
+                          <span className='fw-bold'> Published:</span>{" "}
+                          {article.datePublished}
+                        </p>
+                      </Container>
                       <section>
                         <h4>Abstract</h4>
                         <p>{article.abstract}</p>
@@ -81,7 +85,7 @@ function JournalDetails() {
                   return null;
                 }
               })}
-            </section>
+            </Container>
           </div>
         );
       })}
