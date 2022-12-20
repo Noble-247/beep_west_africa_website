@@ -34,7 +34,7 @@ function NavigationBar(props) {
           <Link to={"/"} className='text-decoration-none'>
             <Navbar.Brand className='d-flex'>
               <Image fluid src={Logo}></Image>
-              <div style={props.logoTextStyle}>
+              <div style={props.logoTextStyle} className='d-none d-md-block'>
                 BEEP WEST AFRICA <br />
                 <span>INTERNATIONAL JOURNAL OF GLOBAL RESEARCH</span> <br />
                 <span>
