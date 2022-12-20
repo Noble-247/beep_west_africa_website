@@ -73,9 +73,9 @@ function Home() {
           </div>
         </Link>
       </Container>
-      <section className='bg-white'>
+      {/*   <section className='bg-white'>
         <LatestPublishedArticle />
-      </section>
+      </section> */}
     </Fragment>
   );
 }
