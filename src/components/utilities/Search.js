@@ -33,7 +33,7 @@ function Search() {
                   name='journalName'
                   value={searchData.journalName}
                   onChange={updateSearchData}
-                  placeholder='search for journals'
+                  placeholder='search for journals or proceedings'
                   aria-label='search'
                   aria-describedby='search'
                 />
