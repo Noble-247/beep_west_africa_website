@@ -6,7 +6,7 @@ import { Container, Row } from "react-bootstrap";
 import Search from "../utilities/Search";
 import { Link } from "react-router-dom";
 
-import LatestPublishedArticle from "../utilities/LatestPublishedArticle";
+/* import LatestPublishedArticle from "../utilities/LatestPublishedArticle"; */
 import useTitle from "../customHooks/useTitle";
 
 function Home() {
