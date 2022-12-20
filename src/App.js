@@ -63,15 +63,13 @@ function App() {
     <div className='bg-light'>
       {/* Navigation & Router */}
       <BrowserRouter>
-        <nav>
-          <NavigationBar
-            logoTextStyle={logoTextStyle}
-            navLinkStyle={navLinkStyle}
-            navFontSize={navFontSize}
-            mouseEnterEventOnNavBar={mouseEnterEventOnNavBar}
-            mouseLeaveEventOnNavBar={mouseLeaveEventOnNavBar}
-          />
-        </nav>
+        <NavigationBar
+          logoTextStyle={logoTextStyle}
+          navLinkStyle={navLinkStyle}
+          navFontSize={navFontSize}
+          mouseEnterEventOnNavBar={mouseEnterEventOnNavBar}
+          mouseLeaveEventOnNavBar={mouseLeaveEventOnNavBar}
+        />
         {/* Routes */}
         <main>
           <Container fluid className='px-0 pt-0 pb-2'>
