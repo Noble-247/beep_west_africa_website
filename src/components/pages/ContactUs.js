@@ -38,12 +38,14 @@ function ContactUs() {
         <Row className='mt-5 justify-content-center'>
           <Col md={6}>
             <Card className='shadow-lg'>
-              <Card.Header className='h3 text-center'>
-                Registration Form
+              <Card.Header className='h3 text-center bg-dark text-primary'>
+                Contact Us
               </Card.Header>
               <Card.Body>
                 <Card.Title>
-                  Fill and submit this form, and we will contact you ASAP
+                  <small>
+                    Fill and submit this form, and we will contact you ASAP
+                  </small>
                 </Card.Title>
                 <Form>
                   <Form.Group className='my-3'>
@@ -109,8 +111,7 @@ function ContactUs() {
                   <Button
                     onClick={handleSubmit}
                     type='submit'
-                    className='d-block'
-                    variant='success'
+                    className='d-block btn btn-dark text-primary fw-semibold w-100'
                   >
                     Send
                   </Button>
