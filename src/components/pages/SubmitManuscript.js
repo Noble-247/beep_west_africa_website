@@ -192,10 +192,10 @@ function SubmitManuscript() {
 export default SubmitManuscript;
 
 /* <Button
-                          onClick={clearFormData}
-                          type='button'
-                          className='d-block'
-                          variant='dark'
-                        >
-                          Clear Flelds
-                        </Button> */
+  onClick={clearFormData}
+  type='button'
+  className='d-block'
+  variant='dark'
+>
+  Clear Flelds
+</Button> */
