@@ -8,7 +8,7 @@ import Proceeding from "../utilities/Proceeding";
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
 
-  const [conferenceProceedings, setConferenceProceedings] =
+  const [conferenceProceedings /* setConferenceProceedings */] =
     useState(proceedings);
 
   console.log(conferenceProceedings);

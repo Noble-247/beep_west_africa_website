@@ -44,7 +44,7 @@ function Journals() {
     { id: 27, letter: "Y" },
     { id: 28, letter: "Z" },
   ];
-  const [journalCategories, setJournalCategories] = useState(JournalData);
+  const [journalCategories /* setJournalCategories */] = useState(JournalData);
 
   return (
     <Fragment>

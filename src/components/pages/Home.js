@@ -16,7 +16,8 @@ function Home() {
   const iconStyles = {
     fontSize: "50px",
   };
-  const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
+  const [journalCategoryData /* setJournalCategoryData */] =
+    useState(JournalData);
 
   return (
     <Fragment>
