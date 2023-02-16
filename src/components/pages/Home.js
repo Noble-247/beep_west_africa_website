@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Carousels from "../utilities/Carousels";
 import JournalData from "../../Database/allJournals/journals";
 import JournalCategory from "../utilities/JournalCategory";
+import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Search from "../utilities/Search";
 import { Link } from "react-router-dom";
@@ -15,6 +16,8 @@ function Home() {
   const iconStyles = {
     fontSize: "50px",
   };
+  const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
+
   return (
     <Fragment>
       <Carousels />
@@ -51,7 +54,7 @@ function Home() {
       </div>
       <Container>
         <Row className='mb-3'>
-          {JournalData.map((data) => {
+          {journalCategoryData.map((data) => {
             return (
               <JournalCategory
                 key={data.id}
