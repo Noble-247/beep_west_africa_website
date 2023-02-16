@@ -26,28 +26,22 @@ function Home() {
       </Container>
       <div className=' bg-white'>
         <Container className='d-flex justify-content-between flex-wrap text-primary my-3 text-center fw-bold p-3'>
-          <Link to={"/"} className='d-block flex-grow-1'>
+          <Link to={"/submit_manuscript"} className='d-block flex-grow-1'>
             <div className='border p-2'>
               <i className='bi bi-arrow-up-circle' style={iconStyles}></i>
               <p>SUBMIT MANUSCRIPT</p>
             </div>
           </Link>
-          <Link to={"/"} className='d-block flex-grow-1'>
+          <Link to={"/journals"} className='d-block flex-grow-1'>
             <div className='border p-2'>
               <i className='bi bi-journals' style={iconStyles}></i>
               <p>JOURNALS</p>
             </div>
           </Link>
-          <Link to={"/"} className='d-block flex-grow-1'>
+          <Link to={"/proceedings"} className='d-block flex-grow-1'>
             <div className='border p-2'>
               <i className='bi bi-journal-check' style={iconStyles}></i>
               <p>PROCEEDINGS</p>
-            </div>
-          </Link>
-          <Link to={"/"} className='d-block flex-grow-1'>
-            <div className='border p-2'>
-              <i className='bi bi-arrow-repeat' style={iconStyles}></i>
-              <p>CONFERENCES</p>
             </div>
           </Link>
         </Container>
