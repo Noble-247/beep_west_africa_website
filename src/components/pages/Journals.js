@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import {
   Badge,
   Col,
@@ -44,7 +44,7 @@ function Journals() {
     { id: 27, letter: "Y" },
     { id: 28, letter: "Z" },
   ];
-  const journalCategories = JournalData;
+  const [journalCategories, setJournalCategories] = useState(JournalData);
 
   return (
     <Fragment>
