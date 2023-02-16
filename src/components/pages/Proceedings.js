@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import useTitle from "../customHooks/useTitle";
 import Search from "../utilities/Search";
@@ -8,7 +8,8 @@ import Proceeding from "../utilities/Proceeding";
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
 
-  const conferenceProceedings = proceedings;
+  const [conferenceProceedings, setConferenceProceedings] =
+    useState(proceedings);
 
   console.log(conferenceProceedings);
 
