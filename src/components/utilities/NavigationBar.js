@@ -1,28 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { NavLink, Link } from "react-router-dom";
-import {
-  Button,
-  Container,
-  Navbar,
-  Nav,
-  Modal,
-  Image,
-  Stack,
-} from "react-bootstrap";
+import { Button, Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
 import Logo from "../../image/logos_and_sponsors/logo2.png";
-import Search from "./Search";
 
 function NavigationBar(props) {
-  /* Modal State */
-  const [show, setShow] = useState(false);
-
-  function handleClose() {
-    setShow(false);
-  }
-  function handleShow() {
-    setShow(true);
-  }
-
   function signIn(event) {
     console.log("successfully signed in!!");
   }
@@ -95,13 +76,6 @@ function NavigationBar(props) {
               </NavLink>
               <Stack direction='horizontal' gap={3} className='ms-1'>
                 <Button
-                  onClick={handleShow}
-                  className='btn btn-dark d-block'
-                  size='sm'
-                >
-                  <i className='bi bi-search'></i>
-                </Button>
-                <Button
                   onClick={(event) => signIn(event)}
                   className='btn btn-dark d-block'
                   size='sm'
@@ -114,14 +88,6 @@ function NavigationBar(props) {
               </Stack>
             </Nav>
           </Navbar.Collapse>
-
-          {/* Modal */}
-          <Modal show={show} size='lg' onHide={handleClose}>
-            <Modal.Header closeButton className='bg-light'></Modal.Header>
-            <Modal.Body className='bg-light'>
-              <Search />
-            </Modal.Body>
-          </Modal>
         </Container>
       </Navbar>
     </Fragment>
