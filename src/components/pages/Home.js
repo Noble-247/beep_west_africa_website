@@ -4,7 +4,7 @@ import JournalData from "../../Database/allJournals/journals";
 import JournalCategory from "../utilities/JournalCategory";
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import Search from "../utilities/Search";
+import SearchHomePage from "../search/SearchHomePage";
 import { Link } from "react-router-dom";
 
 /* import LatestPublishedArticle from "../utilities/LatestPublishedArticle"; */
@@ -12,18 +12,40 @@ import useTitle from "../customHooks/useTitle";
 
 function Home() {
   useTitle("Beep West Africa | Home");
-  // console.log(JournalCategoties);
   const iconStyles = {
     fontSize: "50px",
   };
   const [journalCategoryData /* setJournalCategoryData */] =
     useState(JournalData);
 
+  /* Search Bar States & Functions */
+  const [searchData, setSearchData] = useState({ journalCategoryName: "" });
+
+  function updateSearchData(event) {
+    const { name, value } = event.target;
+    setSearchData((previousSearchData) => {
+      return {
+        ...previousSearchData,
+        [name]: value,
+      };
+    });
+  }
+
+  function searchJournalCategories(event) {
+    console.log(searchData);
+  }
+
+  console.log(searchData.journalCategoryName);
+
   return (
     <Fragment>
       <Carousels />
       <Container>
-        <Search />
+        <SearchHomePage
+          searchData={searchData}
+          updateSearchData={updateSearchData}
+          searchJournalCategories={searchJournalCategories}
+        />
       </Container>
       <div className=' bg-white'>
         <Container className='d-flex justify-content-between flex-wrap text-primary my-3 text-center fw-bold p-3'>
