@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import useTitle from "../customHooks/useTitle";
-import Search from "../utilities/Search";
+import SearchProceedings from "../search/SearchProceedings";
 import proceedings from "../../Database/allProceedings/proceedings";
 import Proceeding from "../utilities/Proceeding";
 
@@ -11,7 +11,24 @@ function Proceedings() {
   const [conferenceProceedings /* setConferenceProceedings */] =
     useState(proceedings);
 
-  console.log(conferenceProceedings);
+  /* Search Bar States & Functions */
+  const [searchData, setSearchData] = useState({ proceedingName: "" });
+
+  function updateSearchData(event) {
+    const { name, value } = event.target;
+    setSearchData((previousSearchData) => {
+      return {
+        ...previousSearchData,
+        [name]: value,
+      };
+    });
+  }
+
+  function searchProceeding(event) {
+    console.log(searchData);
+  }
+
+  console.log(searchData.journproceedingName);
 
   return (
     <Fragment>
@@ -19,7 +36,11 @@ function Proceedings() {
         <h1>PROCEEDINGS</h1>
         <Row>
           <Col>
-            <Search />
+            <SearchProceedings
+              searchData={searchData}
+              updateSearchData={updateSearchData}
+              searchProceeding={searchProceeding}
+            />
           </Col>
         </Row>
       </Container>
