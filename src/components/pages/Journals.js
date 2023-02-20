@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useTitle from "../customHooks/useTitle";
-import Search from "../utilities/Search";
 import JournalData from "../../Database/allJournals/journals";
 
 function Journals() {
@@ -50,11 +49,7 @@ function Journals() {
     <Fragment>
       <Container fluid className='bg-black text-white text-center p-5'>
         <h1>JOURNALS</h1>
-        <Row>
-          <Col>
-            <Search />
-          </Col>
-        </Row>
+        <Row></Row>
       </Container>
       <Container className='pt-4'>
         <Row>
