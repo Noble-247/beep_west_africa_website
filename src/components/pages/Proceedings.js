@@ -8,7 +8,7 @@ import Proceeding from "../utilities/Proceeding";
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
 
-  const [conferenceProceedings /* setConferenceProceedings */] =
+  const [conferenceProceedings, setConferenceProceedings] =
     useState(proceedings);
 
   /* Search Bar States & Functions */
@@ -25,10 +25,21 @@ function Proceedings() {
   }
 
   function searchProceeding(event) {
-    console.log(searchData);
+    event.preventDefault();
+
+    const filteredData = conferenceProceedings.filter((data) =>
+      data.author
+        .toLowerCase()
+        .includes(searchData.proceedingName.toLowerCase())
+    );
+    setConferenceProceedings(filteredData);
+
+    // TODO: IMPLEMENTATION WHEN filteredData returns an empty array
+
+    console.log(filteredData.length);
   }
 
-  console.log(searchData.journproceedingName);
+  /*  console.log(searchData.journproceedingName); */
 
   return (
     <Fragment>
@@ -47,24 +58,25 @@ function Proceedings() {
       <Container>
         <section>
           <h4 className='text-center mt-3 fw-bold'>ARTICLES</h4>
-          {conferenceProceedings.map((conferenceProceeding) => {
-            return (
-              <div key={conferenceProceeding.id}>
-                <Row className='justify-content-center'>
-                  <Proceeding
-                    id={conferenceProceeding.id}
-                    title={conferenceProceeding.title}
-                    topic={conferenceProceeding.topic}
-                    author={conferenceProceeding.author}
-                    articleNumber={conferenceProceeding.articleNumber}
-                    abstract={conferenceProceeding.abstract}
-                    keywords={conferenceProceeding.keywords}
-                    copywrite={conferenceProceeding.copywrite}
-                  />
-                </Row>
-              </div>
-            );
-          })}
+          {conferenceProceedings &&
+            conferenceProceedings.map((conferenceProceeding) => {
+              return (
+                <div key={conferenceProceeding.id}>
+                  <Row className='justify-content-center'>
+                    <Proceeding
+                      id={conferenceProceeding.id}
+                      title={conferenceProceeding.title}
+                      topic={conferenceProceeding.topic}
+                      author={conferenceProceeding.author}
+                      articleNumber={conferenceProceeding.articleNumber}
+                      abstract={conferenceProceeding.abstract}
+                      keywords={conferenceProceeding.keywords}
+                      copywrite={conferenceProceeding.copywrite}
+                    />
+                  </Row>
+                </div>
+              );
+            })}
         </section>
       </Container>
     </Fragment>

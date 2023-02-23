@@ -7,7 +7,7 @@ function SearchProceedings(props) {
       <Container className='mt-3'>
         <Row className='justify-content-center'>
           <Col md={10}>
-            <Form>
+            <Form onSubmit={(event) => props.searchProceeding(event)}>
               <InputGroup size='lg' className='mb-3'>
                 <Form.Control
                   className='bg-dark text-white border-0'
@@ -15,7 +15,7 @@ function SearchProceedings(props) {
                   name='proceedingName'
                   value={props.searchData.proceedingName}
                   onChange={props.updateSearchData}
-                  placeholder='search for proceedings'
+                  placeholder='search proceedings by Author'
                   aria-label='search'
                   aria-describedby='search'
                 />
