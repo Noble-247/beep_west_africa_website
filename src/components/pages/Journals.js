@@ -121,26 +121,3 @@ function Journals() {
 }
 
 export default Journals;
-
-/* 
-
-<Tab eventKey='home' title='Home'>
-                  <p>Lorem ipsum dolor</p>
-                </Tab>
-                <Tab eventKey='profile' title='Profile'>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </Tab>
-                <Tab eventKey='contact' title='Contact'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                </Tab>
-*/
-
-/* 
-
-<ListGroup.Item>
-                  <Link className='text-decoration-none fw-bold' to={"/"}>
-                    Home
-                  </Link>
-                </ListGroup.Item>
-
-*/
