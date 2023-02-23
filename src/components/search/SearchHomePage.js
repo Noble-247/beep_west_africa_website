@@ -7,7 +7,7 @@ function SearchHomePage(props) {
       <Container className='mt-3'>
         <Row className='justify-content-center'>
           <Col md={10}>
-            <Form>
+            <Form onSubmit={(event) => props.searchJournalCategories(event)}>
               <InputGroup size='lg' className='mb-3'>
                 <Form.Control
                   className='bg-dark text-white border-0'
@@ -15,7 +15,7 @@ function SearchHomePage(props) {
                   name='journalCategoryName'
                   value={props.searchData.journalCategoryName}
                   onChange={props.updateSearchData}
-                  placeholder='search for journals'
+                  placeholder='search journals by region, Eg: African, International, etc'
                   aria-label='search'
                   aria-describedby='search'
                 />

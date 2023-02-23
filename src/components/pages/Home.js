@@ -15,8 +15,7 @@ function Home() {
   const iconStyles = {
     fontSize: "50px",
   };
-  const [journalCategoryData /* setJournalCategoryData */] =
-    useState(JournalData);
+  const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
 
   /* Search Bar States & Functions */
   const [searchData, setSearchData] = useState({ journalCategoryName: "" });
@@ -32,10 +31,20 @@ function Home() {
   }
 
   function searchJournalCategories(event) {
-    console.log(searchData);
+    event.preventDefault();
+    const filteredData = JournalData.filter((data) =>
+      data.title
+        .toLowerCase()
+        .includes(searchData.journalCategoryName.toLowerCase())
+    );
+    setJournalCategoryData(filteredData);
+
+    // TODO: IMPLEMENTATION WHEN filteredData returns false
+
+    console.log(filteredData);
   }
 
-  console.log(searchData.journalCategoryName);
+  // console.log(searchData.journalCategoryName);
 
   return (
     <Fragment>
@@ -71,17 +80,18 @@ function Home() {
       </div>
       <Container>
         <Row className='mb-3'>
-          {journalCategoryData.map((data) => {
-            return (
-              <JournalCategory
-                key={data.id}
-                image={data.image}
-                title={data.title}
-                category={data.category}
-                id={data.id}
-              />
-            );
-          })}
+          {journalCategoryData &&
+            journalCategoryData.map((data) => {
+              return (
+                <JournalCategory
+                  key={data.id}
+                  image={data.image}
+                  title={data.title}
+                  category={data.category}
+                  id={data.id}
+                />
+              );
+            })}
         </Row>
         <Link to={"/"} className='text-decoration-none'>
           <div className='mb-3'>
