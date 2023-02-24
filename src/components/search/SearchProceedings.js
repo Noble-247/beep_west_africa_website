@@ -15,7 +15,7 @@ function SearchProceedings(props) {
                   name='proceedingName'
                   value={props.searchData.proceedingName}
                   onChange={props.updateSearchData}
-                  placeholder='search proceedings by Author'
+                  placeholder='Search Proceedings by Author'
                   aria-label='search'
                   aria-describedby='search'
                 />

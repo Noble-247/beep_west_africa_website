@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import useTitle from "../customHooks/useTitle";
 import SearchProceedings from "../search/SearchProceedings";
 import proceedings from "../../Database/allProceedings/proceedings";
@@ -8,12 +8,31 @@ import Proceeding from "../utilities/Proceeding";
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
 
+  // Page States
   const [conferenceProceedings, setConferenceProceedings] =
     useState(proceedings);
-
-  /* Search Bar States & Functions */
   const [searchData, setSearchData] = useState({ proceedingName: "" });
+  const [errorMessage, setErrorMessage] = useState("");
 
+  // Error Message Content
+  let errorMessageContent = (
+    <div>
+      <div className='mb-2 text-primary'>
+        Sorry, Your Search Did Not Return Any Data!
+      </div>
+      <Button
+        onClick={(e) => {
+          setConferenceProceedings(proceedings);
+          setErrorMessage("");
+        }}
+        className='btn btn-dark'
+      >
+        Go Back
+      </Button>
+    </div>
+  );
+
+  // Search Form Controls
   function updateSearchData(event) {
     const { name, value } = event.target;
     setSearchData((previousSearchData) => {
@@ -24,6 +43,7 @@ function Proceedings() {
     });
   }
 
+  // Search Function onClick
   function searchProceeding(event) {
     event.preventDefault();
 
@@ -32,14 +52,12 @@ function Proceedings() {
         .toLowerCase()
         .includes(searchData.proceedingName.toLowerCase())
     );
+    setSearchData({ proceedingName: "" });
     setConferenceProceedings(filteredData);
-
-    // TODO: IMPLEMENTATION WHEN filteredData returns an empty array
-
-    console.log(filteredData.length);
+    if (filteredData.length < 1) {
+      setErrorMessage(errorMessageContent);
+    }
   }
-
-  /*  console.log(searchData.journproceedingName); */
 
   return (
     <Fragment>
@@ -77,6 +95,9 @@ function Proceedings() {
                 </div>
               );
             })}
+          <Row className='my-5'>
+            <h3 className='text-center'>{errorMessage}</h3>
+          </Row>
         </section>
       </Container>
     </Fragment>
