@@ -15,7 +15,7 @@ function SearchHomePage(props) {
                   name='journalCategoryName'
                   value={props.searchData.journalCategoryName}
                   onChange={props.updateSearchData}
-                  placeholder='search journals by region, Eg: African, International, etc'
+                  placeholder='Search Journals by Region, Eg: African, International, etc'
                   aria-label='search'
                   aria-describedby='search'
                 />

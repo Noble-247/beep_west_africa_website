@@ -3,7 +3,7 @@ import Carousels from "../utilities/Carousels";
 import JournalData from "../../Database/allJournals/journals";
 import JournalCategory from "../utilities/JournalCategory";
 import { useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 import SearchHomePage from "../search/SearchHomePage";
 import { Link } from "react-router-dom";
 
@@ -12,14 +12,36 @@ import useTitle from "../customHooks/useTitle";
 
 function Home() {
   useTitle("Beep West Africa | Home");
+
+  // Icon Styles Object
   const iconStyles = {
     fontSize: "50px",
   };
+
+  // Page States
   const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
-
-  /* Search Bar States & Functions */
   const [searchData, setSearchData] = useState({ journalCategoryName: "" });
+  const [errorMessage, setErrorMessage] = useState("");
 
+  // Error Message Content
+  let errorMessageContent = (
+    <div>
+      <div className='mb-2 text-primary'>
+        Sorry, Your Search Did Not Return Any Data!
+      </div>
+      <Button
+        onClick={(e) => {
+          setJournalCategoryData(JournalData);
+          setErrorMessage("");
+        }}
+        className='btn btn-dark'
+      >
+        Return to Home Page
+      </Button>
+    </div>
+  );
+
+  // Search Form controls
   function updateSearchData(event) {
     const { name, value } = event.target;
     setSearchData((previousSearchData) => {
@@ -30,6 +52,7 @@ function Home() {
     });
   }
 
+  // Search Function onClick
   function searchJournalCategories(event) {
     event.preventDefault();
     const filteredData = JournalData.filter((data) =>
@@ -37,14 +60,12 @@ function Home() {
         .toLowerCase()
         .includes(searchData.journalCategoryName.toLowerCase())
     );
+    setSearchData({ journalCategoryName: "" });
     setJournalCategoryData(filteredData);
-
-    // TODO: IMPLEMENTATION WHEN filteredData returns false
-
-    console.log(filteredData);
+    if (filteredData.length < 1) {
+      setErrorMessage(errorMessageContent);
+    }
   }
-
-  // console.log(searchData.journalCategoryName);
 
   return (
     <Fragment>
@@ -92,6 +113,9 @@ function Home() {
                 />
               );
             })}
+        </Row>
+        <Row className='my-5'>
+          <h3 className='text-center'>{errorMessage}</h3>
         </Row>
         <Link to={"/"} className='text-decoration-none'>
           <div className='mb-3'>
