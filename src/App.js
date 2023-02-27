@@ -77,7 +77,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/about_us' element={<AboutUs />} />
               <Route path='/call_for_paper' element={<CallForPaper />} />
-              <Route path='submit_manuscript' element={<SubmitManuscript />} />
+              <Route path='/submit_manuscript' element={<SubmitManuscript />} />
               <Route path='/contact_us' element={<ContactUs />} />
               <Route
                 path='journal_category/:journal_category_ID'

@@ -1,13 +1,9 @@
 import React, { Fragment } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Button, Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
+import { Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
 import Logo from "../../image/logos_and_sponsors/logo2.png";
 
 function NavigationBar(props) {
-  function signIn(event) {
-    console.log("successfully signed in!!");
-  }
-
   return (
     <Fragment>
       <Navbar className='bg-primary' expand='xl' variant='dark' sticky='top'>
@@ -75,8 +71,8 @@ function NavigationBar(props) {
                 CONTACT US
               </NavLink>
               <Stack direction='horizontal' gap={3} className='ms-1'>
-                <Button
-                  onClick={(event) => signIn(event)}
+                <Link
+                  to={"/submit_manuscript"}
                   className='btn btn-dark d-block'
                   size='sm'
                 >
@@ -84,7 +80,7 @@ function NavigationBar(props) {
                     <i className='bi bi-person-circle'></i>
                     <span>Sign In</span>
                   </Stack>
-                </Button>
+                </Link>
               </Stack>
             </Nav>
           </Navbar.Collapse>
