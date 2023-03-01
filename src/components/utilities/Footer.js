@@ -53,12 +53,12 @@ function Footer(props) {
                 About Us
               </Link>
               <Link
-                to={"/call_for_paper"}
+                to={"/general_news"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
                 onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
                 onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
               >
-                Call For Paper
+                General News{" "}
               </Link>
               <Link
                 to={"/submit_manuscript"}

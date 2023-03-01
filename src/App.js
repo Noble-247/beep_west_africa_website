@@ -9,7 +9,7 @@ import NavigationBar from "./components/utilities/NavigationBar";
 /* Import Pages */
 import Home from "./components/pages/Home";
 import AboutUs from "./components/pages/AboutUs";
-import CallForPaper from "./components/pages/CallForPaper";
+import GeneralNews from "./components/pages/GeneralNews";
 import SubmitManuscript from "./components/pages/SubmitManuscript";
 import ContactUs from "./components/pages/ContactUs";
 import PageNotFound from "./components/pages/PageNotFound";
@@ -76,7 +76,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about_us' element={<AboutUs />} />
-              <Route path='/call_for_paper' element={<CallForPaper />} />
+              <Route path='/general_news' element={<GeneralNews />} />
               <Route path='/submit_manuscript' element={<SubmitManuscript />} />
               <Route path='/contact_us' element={<ContactUs />} />
               <Route
