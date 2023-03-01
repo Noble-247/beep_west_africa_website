@@ -3,9 +3,10 @@ import Carousels from "../utilities/Carousels";
 import JournalData from "../../Database/allJournals/journals";
 import JournalCategory from "../utilities/JournalCategory";
 import { useState } from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import SearchHomePage from "../search/SearchHomePage";
 import { Link } from "react-router-dom";
+import SpinnerImage from "../../image/utility_photos/Spinner-1s-200px.gif";
 
 /* import LatestPublishedArticle from "../utilities/LatestPublishedArticle"; */
 import useTitle from "../customHooks/useTitle";
@@ -13,18 +14,32 @@ import useTitle from "../customHooks/useTitle";
 function Home() {
   useTitle("Beep West Africa | Home");
 
+  // Page States
+  const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
+  const [searchData, setSearchData] = useState({ journalCategoryName: "" });
+
+  // Error State
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Loading State
+  const [loading, setLoading] = useState("");
+
   // Icon Styles Object
   const iconStyles = {
     fontSize: "50px",
   };
 
-  // Page States
-  const [journalCategoryData, setJournalCategoryData] = useState(JournalData);
-  const [searchData, setSearchData] = useState({ journalCategoryName: "" });
-  const [errorMessage, setErrorMessage] = useState("");
+  // Set Spinner Variable for loading state
+  const searchLoader = (
+    <img
+      src={SpinnerImage}
+      alt='Loading...'
+      style={{ width: "500px", margin: "auto", display: "block" }}
+    />
+  );
 
   // Error Message Content
-  let errorMessageContent = (
+  const errorMessageContent = (
     <div>
       <div className='mb-2 text-primary'>
         Sorry, Your Search Did Not Return Any Data!
@@ -55,17 +70,36 @@ function Home() {
   // Search Function onClick
   function searchJournalCategories(event) {
     event.preventDefault();
+
+    // Do nothing if searchData is empty
+    if (searchData.journalCategoryName === "") {
+      return;
+    }
+
+    setLoading(searchLoader);
+
     const filteredData = JournalData.filter((data) =>
       data.title
         .toLowerCase()
         .includes(searchData.journalCategoryName.toLowerCase())
     );
+
     setSearchData({ journalCategoryName: "" });
-    setJournalCategoryData(filteredData);
+
+    setTimeout(() => {
+      setJournalCategoryData(filteredData);
+    }, 2000);
+
+    setTimeout(() => {
+      setLoading("");
+    }, 3000);
+
     if (filteredData.length < 1) {
       setErrorMessage(errorMessageContent);
     }
   }
+
+  // TODO: Display an error message if searchData is empty
 
   return (
     <Fragment>
@@ -101,6 +135,17 @@ function Home() {
       </div>
       <Container>
         <Row className='mb-3'>
+          <Row
+            style={{
+              position: "fixed",
+              top: "100px",
+              left: "10px",
+              zIndex: "100",
+            }}
+            className='align-items-center justify-content-center'
+          >
+            <Col md={10}>{loading}</Col>
+          </Row>
           {journalCategoryData &&
             journalCategoryData.map((data) => {
               return (

@@ -4,6 +4,7 @@ import useTitle from "../customHooks/useTitle";
 import SearchProceedings from "../search/SearchProceedings";
 import proceedings from "../../Database/allProceedings/proceedings";
 import Proceeding from "../utilities/Proceeding";
+import SpinnerImage from "../../image/utility_photos/Spinner-1s-200px.gif";
 
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
@@ -12,10 +13,24 @@ function Proceedings() {
   const [conferenceProceedings, setConferenceProceedings] =
     useState(proceedings);
   const [searchData, setSearchData] = useState({ proceedingName: "" });
+
+  // Set Error State
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Loading State
+  const [loading, setLoading] = useState("");
+
+  // Set Spinner Variable for loading state
+  const searchLoader = (
+    <img
+      src={SpinnerImage}
+      alt='Loading...'
+      style={{ width: "500px", margin: "auto", display: "block" }}
+    />
+  );
+
   // Error Message Content
-  let errorMessageContent = (
+  const errorMessageContent = (
     <div>
       <div className='mb-2 text-primary'>
         Sorry, Your Search Did Not Return Any Data!
@@ -47,17 +62,34 @@ function Proceedings() {
   function searchProceeding(event) {
     event.preventDefault();
 
+    // Do nothing if searchData is empty
+    if (searchData.proceedingName === "") {
+      return;
+    }
+
+    setLoading(searchLoader);
+
     const filteredData = conferenceProceedings.filter((data) =>
       data.author
         .toLowerCase()
         .includes(searchData.proceedingName.toLowerCase())
     );
     setSearchData({ proceedingName: "" });
-    setConferenceProceedings(filteredData);
+
+    setTimeout(() => {
+      setConferenceProceedings(filteredData);
+    }, 2000);
+
+    setTimeout(() => {
+      setLoading("");
+    }, 3000);
+
     if (filteredData.length < 1) {
       setErrorMessage(errorMessageContent);
     }
   }
+
+  // TODO: Display an error message if searchData is empty
 
   return (
     <Fragment>
@@ -76,6 +108,19 @@ function Proceedings() {
       <Container>
         <section>
           <h4 className='text-center mt-3 fw-bold'>ARTICLES</h4>
+          <Row>
+            <Row
+              style={{
+                position: "fixed",
+                top: "100px",
+                left: "50px",
+                zIndex: "100",
+              }}
+              className='align-items-center justify-content-center'
+            >
+              <Col md={10}>{loading}</Col>
+            </Row>
+          </Row>
           {conferenceProceedings &&
             conferenceProceedings.map((conferenceProceeding) => {
               return (
@@ -98,6 +143,7 @@ function Proceedings() {
           <Row className='my-5'>
             <h3 className='text-center'>{errorMessage}</h3>
           </Row>
+          <Container></Container>
         </section>
       </Container>
     </Fragment>
