@@ -99,7 +99,8 @@ function Home() {
     }
   }
 
-  // TODO: Display an error message if searchData is empty
+  // TODO - 1: Display an error message if searchData is empty
+  // TODO - 2: Fix issue with error message displaying after searching a second time on the home page
 
   return (
     <Fragment>
