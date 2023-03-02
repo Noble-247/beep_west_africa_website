@@ -20,6 +20,10 @@ function Proceedings() {
   // Loading State
   const [loading, setLoading] = useState("");
 
+  // searchFieldIsEmpty state
+  const [searchFieldIsEmptyErrorState, setSearchFieldIsEmptyErrorState] =
+    useState("");
+
   // Set Spinner Variable for loading state
   const searchLoader = (
     <img
@@ -47,6 +51,14 @@ function Proceedings() {
     </div>
   );
 
+  // Error message to display if search field is empty
+  const searchFieldIsEmptyErrorMessage = (
+    <p className='mb-3 text-danger fw-bold'>
+      <i className='bi bi-exclamation-circle-fill'></i> Please Enter A Search
+      Query....
+    </p>
+  );
+
   // Search Form Controls
   function updateSearchData(event) {
     const { name, value } = event.target;
@@ -64,6 +76,11 @@ function Proceedings() {
 
     // Do nothing if searchData is empty
     if (searchData.proceedingName === "") {
+      setSearchFieldIsEmptyErrorState(searchFieldIsEmptyErrorMessage);
+
+      setTimeout(() => {
+        setSearchFieldIsEmptyErrorState("");
+      }, 3000);
       return;
     }
 
@@ -86,10 +103,10 @@ function Proceedings() {
 
     if (filteredData.length < 1) {
       setErrorMessage(errorMessageContent);
+    } else {
+      setErrorMessage("");
     }
   }
-
-  // TODO: Display an error message if searchData is empty
 
   return (
     <Fragment>
@@ -101,6 +118,7 @@ function Proceedings() {
               searchData={searchData}
               updateSearchData={updateSearchData}
               searchProceeding={searchProceeding}
+              searchFieldIsEmptyErrorState={searchFieldIsEmptyErrorState}
             />
           </Col>
         </Row>

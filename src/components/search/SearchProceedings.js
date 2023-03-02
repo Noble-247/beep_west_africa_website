@@ -27,6 +27,7 @@ function SearchProceedings(props) {
                   <i className='bi bi-search'></i>
                 </Button>
               </InputGroup>
+              <div>{props.searchFieldIsEmptyErrorState}</div>
             </Form>
           </Col>
         </Row>

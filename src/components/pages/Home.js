@@ -24,6 +24,10 @@ function Home() {
   // Loading State
   const [loading, setLoading] = useState("");
 
+  // searchFieldIsEmpty state
+  const [searchFieldIsEmptyErrorState, setSearchFieldIsEmptyErrorState] =
+    useState("");
+
   // Icon Styles Object
   const iconStyles = {
     fontSize: "50px",
@@ -38,7 +42,7 @@ function Home() {
     />
   );
 
-  // Error Message Content
+  // Error Message Content if search filter returns false
   const errorMessageContent = (
     <div>
       <div className='mb-2 text-primary'>
@@ -54,6 +58,14 @@ function Home() {
         Return to Home Page
       </Button>
     </div>
+  );
+
+  // Error message to display if search field is empty
+  const searchFieldIsEmptyErrorMessage = (
+    <p className='mb-3 text-danger fw-bold'>
+      <i className='bi bi-exclamation-circle-fill'></i> Please Enter A Search
+      Query....
+    </p>
   );
 
   // Search Form controls
@@ -73,6 +85,11 @@ function Home() {
 
     // Do nothing if searchData is empty
     if (searchData.journalCategoryName === "") {
+      setSearchFieldIsEmptyErrorState(searchFieldIsEmptyErrorMessage);
+
+      setTimeout(() => {
+        setSearchFieldIsEmptyErrorState("");
+      }, 3000);
       return;
     }
 
@@ -96,11 +113,10 @@ function Home() {
 
     if (filteredData.length < 1) {
       setErrorMessage(errorMessageContent);
+    } else {
+      setErrorMessage("");
     }
   }
-
-  // TODO - 1: Display an error message if searchData is empty
-  // TODO - 2: Fix issue with error message displaying after searching a second time on the home page
 
   return (
     <Fragment>
@@ -110,6 +126,7 @@ function Home() {
           searchData={searchData}
           updateSearchData={updateSearchData}
           searchJournalCategories={searchJournalCategories}
+          searchFieldIsEmptyErrorState={searchFieldIsEmptyErrorState}
         />
       </Container>
       <div className=' bg-white'>

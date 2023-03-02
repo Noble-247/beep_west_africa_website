@@ -7,8 +7,11 @@ function SearchHomePage(props) {
       <Container className='mt-3'>
         <Row className='justify-content-center'>
           <Col md={10}>
-            <Form onSubmit={(event) => props.searchJournalCategories(event)}>
-              <InputGroup size='lg' className='mb-3'>
+            <Form
+              onSubmit={(event) => props.searchJournalCategories(event)}
+              className='mb-4'
+            >
+              <InputGroup size='lg'>
                 <Form.Control
                   className='bg-dark text-white border-0'
                   type='text'
@@ -27,6 +30,7 @@ function SearchHomePage(props) {
                   <i className='bi bi-search'></i>
                 </Button>
               </InputGroup>
+              <div>{props.searchFieldIsEmptyErrorState}</div>
             </Form>
           </Col>
         </Row>
