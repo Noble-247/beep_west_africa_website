@@ -1,3 +1,9 @@
+@media (max-width: 450px) {
+  .spinner {
+    width: 250px;
+  }
+}
+
 .test {
   /* color: rgb(​ 30, 193, 219) */
   /* background-color: #17a2b8; */

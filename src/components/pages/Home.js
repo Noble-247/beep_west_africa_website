@@ -38,7 +38,8 @@ function Home() {
     <img
       src={SpinnerImage}
       alt='Loading...'
-      style={{ width: "500px", margin: "auto", display: "block" }}
+      style={{ width: "300px", margin: "auto", display: "block" }}
+      className='spinner'
     />
   );
 
