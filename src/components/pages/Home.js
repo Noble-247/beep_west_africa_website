@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import SearchHomePage from "../search/SearchHomePage";
 import { Link } from "react-router-dom";
-import SpinnerImage from "../../image/utility_photos/spinner.gif";
+import SpinnerImage from "../../image/utility_photos/Spinner-1s-200px.gif";
 
 /* import LatestPublishedArticle from "../utilities/LatestPublishedArticle"; */
 import useTitle from "../customHooks/useTitle";
