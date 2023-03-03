@@ -4,7 +4,7 @@ import useTitle from "../customHooks/useTitle";
 import SearchProceedings from "../search/SearchProceedings";
 import proceedings from "../../Database/allProceedings/proceedings";
 import Proceeding from "../utilities/Proceeding";
-import SpinnerImage from "../../image/utility_photos/Spinner-1s-200px.gif";
+import SpinnerImage from "../../image/utility_photos/spinner.gif";
 
 function Proceedings() {
   useTitle("Beep West Africa | Conference Proceedings");
