@@ -74,7 +74,7 @@ function Proceedings() {
   function searchProceeding(event) {
     event.preventDefault();
 
-    // Do nothing if searchData is empty
+    // Do nothing if searchData is empty and display an error message
     if (searchData.proceedingName === "") {
       setSearchFieldIsEmptyErrorState(searchFieldIsEmptyErrorMessage);
 

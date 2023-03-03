@@ -83,7 +83,7 @@ function Home() {
   function searchJournalCategories(event) {
     event.preventDefault();
 
-    // Do nothing if searchData is empty
+    // Do nothing if searchData is empty and display an error message
     if (searchData.journalCategoryName === "") {
       setSearchFieldIsEmptyErrorState(searchFieldIsEmptyErrorMessage);
 
