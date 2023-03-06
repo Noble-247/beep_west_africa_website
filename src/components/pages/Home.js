@@ -150,6 +150,12 @@ function Home() {
               <p>PROCEEDINGS</p>
             </div>
           </Link>
+          <Link to={"/general_news"} className='d-block flex-grow-1'>
+            <div className='border p-2'>
+              <i className='bi bi-newspaper' style={iconStyles}></i>
+              <p>GENERAL NEWS</p>
+            </div>
+          </Link>
         </Container>
       </div>
       <Container>
