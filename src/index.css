@@ -1,0 +1,17 @@
+@media (max-width: 450px) {
+  .spinner {
+    width: 250px;
+  }
+}
+
+.site-under-maintenance {
+  background-image: url(image/svg/World-Map.svg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}

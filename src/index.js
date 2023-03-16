@@ -11,7 +11,7 @@ import "./theme_1664711861345.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 // local CSS imports
-import "./App.css";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
