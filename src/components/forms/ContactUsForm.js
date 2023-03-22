@@ -1,33 +1,35 @@
+import { useFormik } from "formik";
 import React, { Fragment } from "react";
 import { Button, Card, Form } from "react-bootstrap";
+import { contactFormSchema } from "./formSchemas";
 
 function ContactUsForm() {
-  const [formData, setFormData] = React.useState({
-    selectDepartment: "",
-    name: "",
-    email: "",
-    message: "",
+  // TODO: DISPLAY A MESSAGE TO ACKNOWLEGE THAT THE MESSAGE HAS BEEN SENT
+
+  const {
+    values,
+    isSubmitting,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+  } = useFormik({
+    initialValues: { selectDepartment: "", name: "", email: "", message: "" },
+    validationSchema: contactFormSchema,
+    onSubmit,
   });
 
-  //console.log(formData);
+  // console.log(formik);
 
-  function updateFormData(event) {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: value,
-      };
-    });
+  async function onSubmit(values, actions) {
+    console.log(values);
+    console.log(actions);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    actions.resetForm();
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    console.log(formData);
-  }
-
-  // console.log(formData.selectDepartment);
+  console.log(errors);
 
   return (
     <Fragment>
@@ -41,18 +43,20 @@ function ContactUsForm() {
               Fill and submit this form, and we will contact you ASAP
             </small>
           </Card.Title>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className='my-3'>
-              <Form.Label>Select Department</Form.Label>
+              <Form.Label>Select a department</Form.Label>
               <Form.Select
                 aria-label='select department'
-                value={formData.selectDepartment}
+                value={values.selectDepartment}
                 name='selectDepartment'
-                onChange={updateFormData}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.selectDepartment ? "border-danger border-2" : ""
+                }
               >
-                <option disabled value='instruction'>
-                  ---Choose Department---
-                </option>
+                <option></option>
                 <option value='help-desk'>Help Desk</option>
                 <option value='accounts'>Accounts</option>
                 <option value='ethics-and-compliance'>
@@ -60,6 +64,16 @@ function ContactUsForm() {
                 </option>
                 <option value='editorial-office'>Editorial Office</option>
               </Form.Select>
+              <Form.Text className='text-danger'>
+                {errors.selectDepartment ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>{" Please select a department"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className='mb-3'>
@@ -67,11 +81,28 @@ function ContactUsForm() {
               <Form.Control
                 type='text'
                 placeholder='type your name here'
-                value={formData.name}
+                value={values.name}
                 name='name'
-                onChange={updateFormData}
-                required='required'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.name && touched.name ? "border-danger border-2" : ""
+                }
               ></Form.Control>
+              <Form.Text className='text-danger'>
+                {errors.name && touched.name ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>
+                      {
+                        " Please enter a valid name. Hint: Name should not be less than 5 characters"
+                      }
+                    </span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className='mb-3'>
@@ -79,13 +110,23 @@ function ContactUsForm() {
               <Form.Control
                 type='email'
                 placeholder='type your name here'
-                value={formData.email}
+                value={values.email}
                 name='email'
-                onChange={updateFormData}
-                required='required'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.email && touched.email ? "border-danger border-2" : ""
+                }
               ></Form.Control>
-              <Form.Text className='text-muted'>
-                We'll never share your email with anyone else
+              <Form.Text className='text-danger'>
+                {errors.email && touched.email ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>{" Please enter a valid email address"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
               </Form.Text>
             </Form.Group>
 
@@ -96,20 +137,36 @@ function ContactUsForm() {
                 rows={3}
                 placeholder='type your message here'
                 name='message'
-                value={formData.message}
-                onChange={updateFormData}
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.message && touched.message
+                    ? "border-danger border-2"
+                    : ""
+                }
               ></Form.Control>
+              <Form.Text className='text-danger'>
+                {errors.message && touched.message ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>{" Please enter a resonable message here"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Form.Text>
             </Form.Group>
+            <div className='d-flex justify-content-around'>
+              <Button
+                type='submit'
+                className='d-block btn btn-dark text-primary fw-semibold w-100'
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending....." : "Send"}
+              </Button>
+            </div>
           </Form>
-          <div className='d-flex justify-content-around'>
-            <Button
-              onClick={handleSubmit}
-              type='submit'
-              className='d-block btn btn-dark text-primary fw-semibold w-100'
-            >
-              Send
-            </Button>
-          </div>
         </Card.Body>
       </Card>
     </Fragment>

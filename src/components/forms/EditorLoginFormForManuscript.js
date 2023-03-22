@@ -1,30 +1,31 @@
+import { useFormik } from "formik";
 import React, { Fragment } from "react";
 import { Button, Card, Form } from "react-bootstrap";
+import { loginFormSchema } from "./formSchemas";
 
 function EditorLoginFormForManuscript() {
-  const [formData, setFormData] = React.useState({
-    userName: "",
-    password: "",
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: loginFormSchema,
+    onSubmit,
   });
 
-  function updateFormData(event) {
-    const { name, value } = event.target;
-    setFormData((previousFormData) => {
-      return {
-        ...previousFormData,
-        [name]: value,
-      };
-    });
-  }
-
-  /*  function clearFormData(event) {
-            setFormData({ userName: "", password: "" });
-          }
-         */
-  function handleRegister(event) {
-    event.preventDefault();
-    console.log(formData);
-    setFormData({ userName: "", password: "" });
+  async function onSubmit(values, actions) {
+    console.log(values);
+    console.log(actions);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    actions.resetForm();
   }
 
   return (
@@ -32,37 +33,71 @@ function EditorLoginFormForManuscript() {
       <Card className='shadow-lg'>
         <Card.Header className='h3 text-center'>EDITOR'S LOGIN</Card.Header>
         <Card.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className='mb-3'>
-              <Form.Label>Username</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
-                type='text'
-                placeholder='Enter Username'
-                name='userName'
-                value={formData.userName}
-                onChange={updateFormData}
+                type='email'
+                placeholder='Enter your email'
+                name='email'
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.email && touched.email ? "border-danger border-2" : ""
+                }
               ></Form.Control>
+              <Form.Text className='text-danger'>
+                {errors.email && touched.email ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>{" Please enter a valid email address"}</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Form.Text>
             </Form.Group>
             <Form.Group className='mb-3'>
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type='password'
-                placeholder='Enter Password'
+                placeholder='Enter your password'
                 name='password'
-                value={formData.password}
-                onChange={updateFormData}
+                value={values.password}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.password && touched.password
+                    ? "border-danger border-2"
+                    : ""
+                }
               ></Form.Control>
+              <Form.Text className='text-danger'>
+                {errors.password && touched.password ? (
+                  <div>
+                    <i className='bi bi-exclamation-circle-fill'></i>
+                    <span>
+                      {
+                        " Password hint: At least one upper case English letter, one lower case English letter, one digit, one special character, and minimum eight in length"
+                      }
+                    </span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Form.Text>
             </Form.Group>
+            <div className='d-flex justify-content-center'>
+              <Button
+                type='submit'
+                className='d-block btn btn-dark text-primary fw-semibold w-100'
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Signing In......" : "Sign In"}
+              </Button>
+            </div>
           </Form>
-          <div className='d-flex justify-content-center'>
-            <Button
-              onClick={handleRegister}
-              type='submit'
-              className='d-block btn btn-dark text-primary fw-semibold w-100'
-            >
-              SIGN IN
-            </Button>
-          </div>
         </Card.Body>
       </Card>
     </Fragment>
