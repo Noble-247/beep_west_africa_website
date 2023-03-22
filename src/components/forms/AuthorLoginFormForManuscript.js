@@ -70,7 +70,9 @@ function AuthorLoginFormForManuscript() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className={
-                  errors.email && touched.email ? "border-danger border-2" : ""
+                  errors.password && touched.password
+                    ? "border-danger border-2"
+                    : ""
                 }
               ></Form.Control>
               <Form.Text className='text-danger'>
