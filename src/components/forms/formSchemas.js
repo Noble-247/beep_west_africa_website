@@ -14,17 +14,6 @@ export const contactFormSchema = Yup.object().shape({
     .email("Please enter a valid email address")
     .required("Required!!"),
   message: Yup.string().required("Required!!"),
-  password: Yup.string()
-    .min(8)
-    .matches(passwordRegex, {
-      message:
-        "Password hint: At least one upper case English letter, one lower case English letter, one digit, one special character, and minimum eight in length",
-    })
-    .required("Required!!"),
-  confirmPassword: Yup.string().oneOf(
-    [Yup.ref("password"), null],
-    "Password must match"
-  ),
 });
 
 export const loginFormSchema = Yup.object({
@@ -39,3 +28,20 @@ export const loginFormSchema = Yup.object({
     })
     .required("Required!!"),
 });
+
+export const signUpFormSchema = Yup.object({
+  email: Yup.string()
+  .email("Please enter a valid email address")
+  .required("Required!!"),
+  password: Yup.string()
+  .min(8)
+  .matches(passwordRegex, {
+    message:
+      "Password hint: At least one upper case English letter, one lower case English letter, one digit, one special character, and minimum eight in length",
+  })
+  .required("Required!!"),
+confirmPassword: Yup.string().oneOf(
+  [Yup.ref("password"), null],
+  "Password must match"
+),
+})
