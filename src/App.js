@@ -34,45 +34,6 @@ function App() {
     setIsUnderConstruction(false);
   }
 
-  const logoTextStyle = {
-    fontSize: "9px",
-    fontWeight: "bolder",
-    marginLeft: "4px",
-  };
-
-  /* active class style */
-  function navLinkStyle({ isActive }) {
-    return {
-      fontWeight: isActive ? "800" : "bolder",
-    };
-  }
-  /* Navigation Font Size */
-  const navFontSize = {
-    fontSize: "14px",
-  };
-
-  function mouseEnterEventOnNavBar(event) {
-    event.target.style.backgroundColor = "rgba(30, 193, 219, 0.8)";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-  function mouseLeaveEventOnNavBar(event) {
-    event.target.style.backgroundColor = "#17a2b8";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-  function mouseEnterEffectOnFooter(event) {
-    event.target.style.backgroundColor = "black";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-
-  function mouseLeaveEventOnFooter(event) {
-    event.target.style.backgroundColor = "#1E2B37";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-
   return (
     <div className='bg-light'>
       {/* Navigation & Router */}
@@ -84,14 +45,7 @@ function App() {
         )}
         {mainContent && (
           <section>
-            <NavigationBar
-              logoTextStyle={logoTextStyle}
-              navLinkStyle={navLinkStyle}
-              navFontSize={navFontSize}
-              mouseEnterEventOnNavBar={mouseEnterEventOnNavBar}
-              mouseLeaveEventOnNavBar={mouseLeaveEventOnNavBar}
-            />
-            {/* Routes */}
+            <NavigationBar />
             <main>
               <Container fluid className='px-0 pt-0 pb-2'>
                 <Routes>
@@ -121,12 +75,11 @@ function App() {
                 </Routes>
               </Container>
             </main>
-            {/* Footer */}
-            <footer className='bg-dark text-white mt-5 mx-0'>
-              <Footer
-                mouseEnterEffectOnFooter={mouseEnterEffectOnFooter}
-                mouseLeaveEventOnFooter={mouseLeaveEventOnFooter}
-              />
+            <footer
+              style={{ marginTop: "120px" }}
+              className='bg-dark text-white mx-0'
+            >
+              <Footer />
             </footer>
           </section>
         )}

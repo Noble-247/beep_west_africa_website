@@ -4,6 +4,35 @@ import { Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
 import Logo from "../../image/logos_and_sponsors/logo2.png";
 
 function NavigationBar(props) {
+  const logoTextStyle = {
+    fontSize: "9px",
+    fontWeight: "bolder",
+    marginLeft: "4px",
+  };
+
+  /* active class style */
+  function navLinkStyle({ isActive }) {
+    return {
+      fontWeight: isActive ? "800" : "bolder",
+    };
+  }
+
+  /* Navigation Font Size */
+  const navFontSize = {
+    fontSize: "14px",
+  };
+
+  function mouseEnterEventOnNavBar(event) {
+    event.target.style.backgroundColor = "rgba(30, 193, 219, 0.8)";
+    event.target.style.transition = "0.5s";
+    event.target.style.transition = "transition-timing-function: ease-in-out";
+  }
+  function mouseLeaveEventOnNavBar(event) {
+    event.target.style.backgroundColor = "#17a2b8";
+    event.target.style.transition = "0.5s";
+    event.target.style.transition = "transition-timing-function: ease-in-out";
+  }
+
   return (
     <Fragment>
       <Navbar className='bg-primary' expand='xl' variant='dark' sticky='top'>
@@ -11,7 +40,7 @@ function NavigationBar(props) {
           <Link to={"/"} className='text-decoration-none'>
             <Navbar.Brand className='d-flex'>
               <Image fluid src={Logo}></Image>
-              <div style={props.logoTextStyle} className='d-none d-md-block'>
+              <div style={logoTextStyle} className='d-none d-md-block'>
                 BEEP WEST AFRICA <br />
                 <span>INTERNATIONAL JOURNAL OF GLOBAL RESEARCH</span> <br />
                 <span>
@@ -23,50 +52,50 @@ function NavigationBar(props) {
           </Link>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='ms-auto' style={props.navFontSize}>
+            <Nav className='ms-auto' style={navFontSize}>
               <NavLink
-                style={props.navLinkStyle}
+                style={navLinkStyle}
                 end
                 className='text-white nav-link'
                 to={"/"}
-                onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
               >
                 HOME
               </NavLink>
               <NavLink
-                style={props.navLinkStyle}
+                style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/journals"}
-                onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
               >
                 JOURNALS
               </NavLink>
               <NavLink
-                style={props.navLinkStyle}
+                style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/proceedings"}
-                onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
               >
                 PROCEEDINGS
               </NavLink>
               <NavLink
-                style={props.navLinkStyle}
+                style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/submit_manuscript"}
-                onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
               >
                 SUBMIT MANUSCRIPT
               </NavLink>
               <NavLink
-                style={props.navLinkStyle}
+                style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/contact_us"}
-                onMouseEnter={(event) => props.mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
               >
                 CONTACT US
               </NavLink>

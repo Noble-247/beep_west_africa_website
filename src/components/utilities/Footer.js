@@ -2,12 +2,24 @@ import React, { Fragment } from "react";
 import { Col, Container, Nav, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Footer(props) {
-  // console.log(props);
+function Footer() {
   const copywriteNoteStyle = {
     fontSize: "13px",
     backgroundColor: "black",
   };
+
+  function mouseEnterEffectOnFooter(event) {
+    event.target.style.backgroundColor = "black";
+    event.target.style.transition = "0.5s";
+    event.target.style.transition = "transition-timing-function: ease-in-out";
+  }
+
+  function mouseLeaveEventOnFooter(event) {
+    event.target.style.backgroundColor = "#1E2B37";
+    event.target.style.transition = "0.5s";
+    event.target.style.transition = "transition-timing-function: ease-in-out";
+  }
+
   return (
     <Fragment>
       <Container className='py-5'>
@@ -39,40 +51,40 @@ function Footer(props) {
               <Link
                 to={"/"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
               >
                 Home
               </Link>
               <Link
                 to={"/about_us"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
               >
                 About Us
               </Link>
               <Link
                 to={"/general_news"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
               >
                 General News{" "}
               </Link>
               <Link
                 to={"/submit_manuscript"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
               >
                 Submit Manuscript
               </Link>
               <Link
                 to={"/contact_us"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => props.mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => props.mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
+                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
               >
                 Contact
               </Link>
