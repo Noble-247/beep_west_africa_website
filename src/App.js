@@ -5,6 +5,10 @@ import { Container } from "react-bootstrap";
 /* Import Utilities */
 import Footer from "./components/utilities/Footer";
 import NavigationBar from "./components/utilities/NavigationBar";
+import SiteUnderConstruction from "./components/pages/SiteUnderConstruction";
+
+/* Import Context */
+import SecondaryHoverEffectContextProvider from "./components/contexts/SecondaryHoverEffectContext";
 
 /* Import Pages */
 import Home from "./components/pages/Home";
@@ -18,7 +22,7 @@ import Proceedings from "./components/pages/Proceedings";
 import Journals from "./components/pages/Journals";
 import JournalDetails from "./components/pages/JournalDetails";
 import ProceedingDetails from "./components/pages/ProceedingDetails";
-import SiteUnderConstruction from "./components/pages/SiteUnderConstruction";
+import PrimaryHoverEffectContextProvider from "./components/contexts/PrimaryHoverEffectContext";
 
 function App() {
   const [mainContent, setMainContent] = useState(false);
@@ -45,7 +49,9 @@ function App() {
         )}
         {mainContent && (
           <section>
-            <NavigationBar />
+            <PrimaryHoverEffectContextProvider>
+              <NavigationBar />
+            </PrimaryHoverEffectContextProvider>
             <main>
               <Container fluid className='px-0 pt-0 pb-2'>
                 <Routes>
@@ -75,11 +81,10 @@ function App() {
                 </Routes>
               </Container>
             </main>
-            <footer
-              style={{ marginTop: "120px" }}
-              className='bg-dark text-white mx-0'
-            >
-              <Footer />
+            <footer className='bg-dark text-white mx-0 mt-5'>
+              <SecondaryHoverEffectContextProvider>
+                <Footer />
+              </SecondaryHoverEffectContextProvider>
             </footer>
           </section>
         )}
