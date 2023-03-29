@@ -1,24 +1,17 @@
-import React, { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Col, Container, Nav, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { SecondaryHoverEffectContext } from "../contexts/SecondaryHoverEffectContext";
 
 function Footer() {
+  const { secondaryMouseEnterEffect, secondaryMouseLeaveEvent } = useContext(
+    SecondaryHoverEffectContext
+  );
+
   const copywriteNoteStyle = {
     fontSize: "13px",
     backgroundColor: "black",
   };
-
-  function mouseEnterEffectOnFooter(event) {
-    event.target.style.backgroundColor = "black";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-
-  function mouseLeaveEventOnFooter(event) {
-    event.target.style.backgroundColor = "#1E2B37";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
 
   return (
     <Fragment>
@@ -51,40 +44,40 @@ function Footer() {
               <Link
                 to={"/"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => secondaryMouseEnterEffect(event)}
+                onMouseLeave={(event) => secondaryMouseLeaveEvent(event)}
               >
                 Home
               </Link>
               <Link
                 to={"/about_us"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => secondaryMouseEnterEffect(event)}
+                onMouseLeave={(event) => secondaryMouseLeaveEvent(event)}
               >
                 About Us
               </Link>
               <Link
                 to={"/general_news"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => secondaryMouseEnterEffect(event)}
+                onMouseLeave={(event) => secondaryMouseLeaveEvent(event)}
               >
                 General News{" "}
               </Link>
               <Link
                 to={"/submit_manuscript"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => secondaryMouseEnterEffect(event)}
+                onMouseLeave={(event) => secondaryMouseLeaveEvent(event)}
               >
                 Submit Manuscript
               </Link>
               <Link
                 to={"/contact_us"}
                 className='py-1 ps-1 pe-0 nav-link text-white'
-                onMouseEnter={(event) => mouseEnterEffectOnFooter(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnFooter(event)}
+                onMouseEnter={(event) => secondaryMouseEnterEffect(event)}
+                onMouseLeave={(event) => secondaryMouseLeaveEvent(event)}
               >
                 Contact
               </Link>
