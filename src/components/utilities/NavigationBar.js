@@ -1,9 +1,14 @@
-import React, { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Container, Navbar, Nav, Image, Stack } from "react-bootstrap";
 import Logo from "../../image/logos_and_sponsors/logo2.png";
+import { PrimaryHoverEffectContext } from "../contexts/PrimaryHoverEffectContext";
 
 function NavigationBar(props) {
+  const { primaryMouseEnterEvent, primaryMouseLeaveEvent } = useContext(
+    PrimaryHoverEffectContext
+  );
+
   const logoTextStyle = {
     fontSize: "9px",
     fontWeight: "bolder",
@@ -21,17 +26,6 @@ function NavigationBar(props) {
   const navFontSize = {
     fontSize: "14px",
   };
-
-  function mouseEnterEventOnNavBar(event) {
-    event.target.style.backgroundColor = "rgba(30, 193, 219, 0.8)";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
-  function mouseLeaveEventOnNavBar(event) {
-    event.target.style.backgroundColor = "#17a2b8";
-    event.target.style.transition = "0.5s";
-    event.target.style.transition = "transition-timing-function: ease-in-out";
-  }
 
   return (
     <Fragment>
@@ -58,8 +52,8 @@ function NavigationBar(props) {
                 end
                 className='text-white nav-link'
                 to={"/"}
-                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => primaryMouseEnterEvent(event)}
+                onMouseLeave={(event) => primaryMouseLeaveEvent(event)}
               >
                 HOME
               </NavLink>
@@ -67,8 +61,8 @@ function NavigationBar(props) {
                 style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/journals"}
-                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => primaryMouseEnterEvent(event)}
+                onMouseLeave={(event) => primaryMouseLeaveEvent(event)}
               >
                 JOURNALS
               </NavLink>
@@ -76,8 +70,8 @@ function NavigationBar(props) {
                 style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/proceedings"}
-                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => primaryMouseEnterEvent(event)}
+                onMouseLeave={(event) => primaryMouseLeaveEvent(event)}
               >
                 PROCEEDINGS
               </NavLink>
@@ -85,8 +79,8 @@ function NavigationBar(props) {
                 style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/submit_manuscript"}
-                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => primaryMouseEnterEvent(event)}
+                onMouseLeave={(event) => primaryMouseLeaveEvent(event)}
               >
                 SUBMIT MANUSCRIPT
               </NavLink>
@@ -94,8 +88,8 @@ function NavigationBar(props) {
                 style={navLinkStyle}
                 className='text-white nav-link'
                 to={"/contact_us"}
-                onMouseEnter={(event) => mouseEnterEventOnNavBar(event)}
-                onMouseLeave={(event) => mouseLeaveEventOnNavBar(event)}
+                onMouseEnter={(event) => primaryMouseEnterEvent(event)}
+                onMouseLeave={(event) => primaryMouseLeaveEvent(event)}
               >
                 CONTACT US
               </NavLink>
