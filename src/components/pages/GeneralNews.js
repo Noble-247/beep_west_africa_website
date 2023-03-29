@@ -1,39 +1,15 @@
-import React, { Fragment, useState, useEffect } from "react";
-import axios from "axios";
+import React, { Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import useTitle from "../customHooks/useTitle";
 import Spinner from "../utilities/Spinner";
+import useAxiosFetch from "../customHooks/useAxiosFetch";
 
 function GeneralNews() {
   useTitle("Beep West Africa | General News");
 
-  const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [categoryHeading, setCategoryHeading] = useState("");
-
-  function getScienceNews() {
-    const url = "https://inshorts.deta.dev/news?category=science";
-
-    axios
-      .get(url)
-      .then((response) => {
-        const data = response.data;
-        console.log(data);
-        setCategoryHeading(data.category);
-        setNews(data.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error.message);
-        setLoading(false);
-      });
-  }
-
-  useEffect(() => {
-    getScienceNews();
-  }, []);
+  const { news, error, loading, categoryHeading } = useAxiosFetch(
+    "https://inshorts.deta.dev/news?category=science"
+  );
 
   return (
     <Fragment>
