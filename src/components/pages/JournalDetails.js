@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import JournalData from "../../Database/allJournals/journals";
 
 function JournalDetails() {
+  // TODO: DISPLAY AN ERRORO MESSAGE IF THE ID IS INVALID
+
   const { journal_ID } = useParams();
 
   const newJournal_ID = journal_ID.slice(0, -2);

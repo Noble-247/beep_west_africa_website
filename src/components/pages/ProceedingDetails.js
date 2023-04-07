@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import proceedings from "../../Database/allProceedings/proceedings";
 
 function ProceedingDetails() {
+  // TODO: DESPLAY AN ERROR MESSAGE IF THE ID IS INVALID
+
   const { proceeding_ID } = useParams();
 
   const detailsOfProceeding = proceedings;
@@ -17,7 +19,7 @@ function ProceedingDetails() {
         {detailsOfProceeding.map((details) => {
           if (details.id === Number(proceeding_ID)) {
             return (
-              <section>
+              <section key={details.id}>
                 <small className='fw-bold text-primary d-block mb-2'>
                   {details.title}
                 </small>
