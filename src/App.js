@@ -25,6 +25,7 @@ import ProceedingDetails from "./components/pages/ProceedingDetails";
 import PrimaryHoverEffectContextProvider from "./components/contexts/PrimaryHoverEffectContext";
 
 function App() {
+  // TODO: CREATE A BACKEND.
   const [mainContent, setMainContent] = useState(false);
   const [isUnderConstruction, setIsUnderConstruction] = useState(true);
 
