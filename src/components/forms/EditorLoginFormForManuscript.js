@@ -1,9 +1,19 @@
 import { useFormik } from "formik";
-import React, { Fragment } from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import React, { Fragment, useState } from "react";
+import { Button, Card, FloatingLabel, Form, InputGroup } from "react-bootstrap";
 import { loginFormSchema } from "./formSchemas";
+import { useNavigate } from "react-router-dom";
 
 function EditorLoginFormForManuscript() {
+  // TODO: CONNECT TO A BACKEND
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  // Formik States and Actions
   const {
     values,
     errors,
@@ -24,8 +34,9 @@ function EditorLoginFormForManuscript() {
   async function onSubmit(values, actions) {
     console.log(values);
     console.log(actions);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     actions.resetForm();
+    navigate("/");
   }
 
   return (
@@ -34,12 +45,16 @@ function EditorLoginFormForManuscript() {
         <Card.Header className='h3 text-center'>EDITOR'S LOGIN</Card.Header>
         <Card.Body>
           <Form onSubmit={handleSubmit}>
-            <Form.Group className='mb-3'>
-              <Form.Label>Email</Form.Label>
+            <FloatingLabel
+              className='mb-3'
+              controlId='floatingInput'
+              label='Email Address'
+            >
               <Form.Control
                 type='email'
                 placeholder='Enter your email'
                 name='email'
+                autoFocus
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -57,11 +72,15 @@ function EditorLoginFormForManuscript() {
                   ""
                 )}
               </Form.Text>
-            </Form.Group>
-            <Form.Group className='mb-3'>
-              <Form.Label>Password</Form.Label>
+            </FloatingLabel>
+            <FloatingLabel
+              className='mb-0'
+              controlId='floatingInput'
+              label='Password'
+              style={{ display: "flex" }}
+            >
               <Form.Control
-                type='password'
+                type={showPassword ? "text" : "password"}
                 placeholder='Enter your password'
                 name='password'
                 value={values.password}
@@ -73,22 +92,32 @@ function EditorLoginFormForManuscript() {
                     : ""
                 }
               ></Form.Control>
-              <Form.Text className='text-danger'>
-                {errors.password && touched.password ? (
-                  <div>
-                    <i className='bi bi-exclamation-circle-fill'></i>
-                    <span>
-                      {
-                        " Password hint: At least one upper case English letter, one lower case English letter, one digit, one special character, and minimum eight in length"
-                      }
-                    </span>
-                  </div>
-                ) : (
-                  ""
-                )}
-              </Form.Text>
-            </Form.Group>
-            <div className='d-flex justify-content-center'>
+              <InputGroup.Text
+                id='basic-addon2'
+                style={{ cursor: "pointer" }}
+                onClick={togglePassword}
+              >
+                <i className='bi bi-eye-fill'></i>
+              </InputGroup.Text>
+            </FloatingLabel>
+            <Form.Text
+              className='text-danger mb-3'
+              aria-label='password error message'
+            >
+              {errors.password && touched.password ? (
+                <div>
+                  <i className='bi bi-exclamation-circle-fill'></i>
+                  <span>
+                    {
+                      " Password hint: At least one upper case English letter, one lower case English letter, one digit, one special character, and minimum eight in length"
+                    }
+                  </span>
+                </div>
+              ) : (
+                ""
+              )}
+            </Form.Text>
+            <div className='d-flex justify-content-center mt-3'>
               <Button
                 type='submit'
                 className='d-block btn btn-dark text-primary fw-semibold w-100'
