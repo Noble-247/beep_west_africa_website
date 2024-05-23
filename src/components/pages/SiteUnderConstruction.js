@@ -6,7 +6,7 @@ function SiteUnderConstruction(props) {
   return (
     <div className='site-under-maintenance'>
       <Container>
-        <CountDownTimer targetDate='2023-12-31T00:00:00' />
+        <CountDownTimer targetDate='2024-12-31T00:00:00' />
         <TypeWriterAnimation />
         <p>
           BEEP WESTAFRICA is a peer-reviewed International Journal Research
